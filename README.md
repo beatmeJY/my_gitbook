@@ -6,7 +6,7 @@ description: 🍇🍈🍉🍊🍋🍌🍑🍐🍏🍎🥭🍍🍒🍓🥝🥑
 
 ## 기타
 
-### 🍇 스프링과 스프링부트의 차이점
+### 🍇 스프링 vs 스프링부트
 
 * 스프링부트는 스프링을 보다 더 쉽게 개발 할 수 있도록 사용합니다.
 * 주로 XML 등의 기본설정들을 자동으로 해주고 ,
@@ -24,11 +24,11 @@ description: 🍇🍈🍉🍊🍋🍌🍑🍐🍏🍎🥭🍍🍒🍓🥝🥑
   * [Release Note](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.0-Release-Notes)
   * [Tracing 관련기능](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#actuator.micrometer-tracing)
 
-이와 같은 이유 때문에 스프링 부트 3.0을 사용하게 되었습니다.
+🍀 위와 같은 이유들로 스프링 부트 3.0을 사용하게 되었습니다.
 
 
 
-### 🍉 라이브러리와 프레임워크의 차이에 대해 설명해주세요
+### 🍉 라이브러리 vs 프레임워크
 
 
 
@@ -41,7 +41,7 @@ description: 🍇🍈🍉🍊🍋🍌🍑🍐🍏🍎🥭🍍🍒🍓🥝🥑
 
 ###
 
-### 🍊 WAS(Web Application Sever)와 Web Server의 차이점은 무엇일까요?
+### 🍊 WAS vs Web Server
 
 #### Web Server
 
@@ -49,7 +49,7 @@ description: 🍇🍈🍉🍊🍋🍌🍑🍐🍏🍎🥭🍍🍒🍓🥝🥑
 * 주로 그림, CSS, 자바스크립트를 포함한 HTML 문서가 클라이언트로 전달됩니다.&#x20;
 * HTTP 서버로 URL과 HTTP의 소프트웨어 일부입니다.
 
-#### WAS
+#### WAS (Web Application Sever)
 
 * 주로 Web Server의 기능을 포함한 동적인 처리를 주로 담당합니다.
 * 프로그램 실행 환경과 데이터베이스 접속 기능을 제공하고 여러 개의 트랜잭션을 관리하며 업무를 처리하는 비즈니스 로직을 수행합니다.
@@ -83,11 +83,13 @@ description: 🍇🍈🍉🍊🍋🍌🍑🍐🍏🍎🥭🍍🍒🍓🥝🥑
 
 
 
-### 🍑 Dispatcher Servlet의 처리는 동기일까 비동기일까
+### 🍑 Dispatcher Servlet는 동기 vs 비동기?
 
-* Dispatcher Servlet은 기본적으로 동기로 처리가 됩니다.
-* 하지만 비동기적으로 처리하도록 `DeferredResult`, `Callable`, `CompletableFuture`와 같은 Spring MVC의 비동기 지원 기능을 활용하면 변경 할 수 있습니다.
-* 또는 @Async 어노테이션을 사용하여 메서드를 비동기적으로 처리할 수도 있습니다.
+* 간단한 동작 환경에선 별도의 설정 없이 **동기로 처리하는 것이 일반적**입니다.
+* 긴 응답이 필요하거나 높은 성능이 필요한 상황에서는 **비동기로 처리하여 효율**을 낼 수 있습니다.
+* 하지만 스프링 MVC의 비동기 지원 기능 (`DeferredResult`, `Callable`, `CompletableFuture)`을 이용하면 비동기로 처리할 수도 있습니다.
+* 또는 @Async를 통해 메서드를 비동기적으로 처리할 수도 있습니다.
+* 따라서 개발자의 설정에 따라 동기와 비동기를 모두 사용할 수 있으므로 상황에 대한 판단이 필요합니다.
 
 
 
