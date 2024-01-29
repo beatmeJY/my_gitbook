@@ -66,20 +66,24 @@ description: 🍇🍈🍉🍊🍋🍌🍑🍐🍏🍎🥭🍍🍒🍓🥝🥑
 
 1. **HTTP 요청**:&#x20;
    * 클라이언트로부터 HTTP 요청을 받습니다.
-2. **Handler(컨트롤러) 조회**:&#x20;
-   * Dispatcher Servlet이 응답을 받아 Handler Mapping을 통해 HTTP요청 URL(헤더라던지 다른정보 더 확인)에 매핑된 Handler 조회합니다.
-3. **핸들러 어댑터 조회**:&#x20;
-   * Dispatcher Servlet이 조회한 핸들러를 처리할 수 있는 Handler Adapter 조회합니다.
-4. **핸들러 어댑터 실행**:&#x20;
-   * 조회 된 Handler Adapter가 Handler를 실행합니다.
-5. **ModelAndView 반환**:&#x20;
-   * Handler 실행 후 반환된 정보를 Handler Adapter가 ModelAndView로 변환해서 반환합니다.
-6. **viewResolver 호출**:&#x20;
-   * Dispatcher Servlet은 ViewResolver를 찾아 실행합니다.
-7. **View 반환** :&#x20;
-   * ViewResolver는 View의 논리 이름을 물리 이름으로 바꾸고, 렌더링 역할을 담당하는 View 객체를 반환합니다.
-8. **View 렌더링**: View를 통해서 View를 렌더링 합니다.
-   * 다른 View는 실제 View를 렌더링 하지만 JSP의 경우 'forward()'를 통해서 해당 JSP로 이동해야 렌더링이 됩니다.
+   * 이 때, PreHandle이 호출됩니다.
+2. **핸들러 (컨트롤러) 조회**:&#x20;
+   * Dispatcher Servlet이 응답을 받아 핸들러 매핑을 통해
+   * HTTP요청 URL  (헤더 등 다른 정보들 확인)에 매핑 된 핸들러를 조회합니다.
+3. **핸들러 어댑터 조회 및 실행**:&#x20;
+   * Dispatcher Servlet이 조회한 핸들러를 처리할 수 있는 핸들러 어댑터를 조회합니다.
+   * 조회 된 핸들러 어댑터가 핸들러를 실행합니다.
+4. **ModelAndView 반환**:&#x20;
+   * 핸들러실행 후 반환 된 정보를 핸들러 어댑터가 ModelAndView 로 변환해서 반환합니다.
+   * 이후 PostHandle이 호출됩니다.
+5. **뷰 리졸버 호출**:&#x20;
+   * Dispatcher Servlet은 뷰 리졸버를 찾아 실행합니다.
+6. **뷰 반환** :&#x20;
+   * 뷰 리졸버는 뷰의 논리 이름을 물리 이름으로 바꾸고, 렌더링 역할을 담당하는 뷰 객체를 반환합니다.
+7. **뷰 렌더링**:&#x20;
+   * 뷰를 렌더링하기 전 afterCompletion이 호출됩니다.
+   * 이후 뷰를 통해 뷰를 렌더링 합니다.
+   * JSP의 경우 'forward()'를 통해서 해당 JSP로 이동해야 렌더링 됩니다.
 
 
 
