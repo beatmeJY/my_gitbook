@@ -206,7 +206,7 @@
 
 ### 🍈크로스 조인이 왜 성능상 좋지 않을까요?
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 두 테이블의 행 수를 곱한 만큼의 결과를 생성하기 때문에 행의 수가 많은 경우 성능상의 문제가 발생 할 수 있습니다.&#x20;
 
@@ -434,6 +434,8 @@
 
 DB는 대부분 이러한 디스크의 I/O를(읽기, 쓰기, 삭제 등) 많이 처리하고 있어 한번의 잘못 작성된  쿼리는 전체 성능의 저하를 가져올 수 있습니다.
 
+
+
 ### 🍈 랜덤 I/O와 순차I/O 란?
 
 #### 🔀 랜덤I/O
@@ -452,6 +454,8 @@ DB는 대부분 이러한 디스크의 I/O를(읽기, 쓰기, 삭제 등) 많이
 
 따라서 일반적으로 **쿼리를 튜닝하는 것**은 순차 I/O를 사용할 지 랜덤 I/O를 선택할지 고민하는 것도 좋은 방법일 수 있으나, 실제로 랜덤 I/O가 순차 I/O로 변하는 일은 많이 않기에 가장 중요한 것은 꼭 필요한 정보만을 읽어 **I/O 작업 자체를 줄여주는 것이 주 목적**이라고 생각합니다.
 
+
+
 ## 🔍 INDEX
 
 ### 🍉 Index 란?
@@ -463,6 +467,8 @@ DB는 대부분 이러한 디스크의 I/O를(읽기, 쓰기, 삭제 등) 많이
 *
 
 <figure><img src="../.gitbook/assets/image (59).png" alt=""><figcaption><p><a href="https://mangkyu.tistory.com/96">https://mangkyu.tistory.com/96</a></p></figcaption></figure>
+
+
 
 ### 🍊 Index는 많은게 좋을까 적은게 좋을까?
 
@@ -478,6 +484,8 @@ DB는 대부분 이러한 디스크의 I/O를(읽기, 쓰기, 삭제 등) 많이
     * 인덱스가 적용된 컬럼에 데이터 변경 시 각각INSERT(인덱스 추가), DELETE(인덱스  사용하지 않음), UPDATE(인덱스 사용하지 않음 및 추가)의 작업을 진행하여야 합니다.
   * **인덱스 유지 비용**
     * 인덱스를 저장하기 위해선 테이블의 약 10% 정도의 디스크를 추가로 사용하여야 합니다.
+
+
 
 ### 🍑 Index Scan 방식 종류
 
@@ -565,11 +573,15 @@ DB는 대부분 이러한 디스크의 I/O를(읽기, 쓰기, 삭제 등) 많이
       SELECT c1, c3 FROM t1 GROUP BY c1, c2; // WHERE에 c3 추가하면 가능
       ```
 
+
+
 ### 🍋 Hash Table
 
 * 컬럼의 값으로 해시 값을 계산해서 인덱싱하는 알고리즘으로 매우 빠른 검색을 지원합니다.
 * 하지만 값을 해싱하여 저장하기 때문에 한글자라도 바뀌면 전혀 다른 값이 되므로, 특정 문자로 시작하는 값 등을 검색할 경우 해시 인덱스를 사용할 수 없습니다.
 * 위와 마찬가지의 이유로 = 동등 연산에는 특화되었지만 <,> 등의 부등호 연산에도 해시 인덱스를 사용할 수 없습니다.
+
+
 
 ### 🍌 B-Tree
 
@@ -600,6 +612,8 @@ DB와 파일 시스템에서 널리 사용되는 Self-balanced Tree입니다.
 * **B-tree의 삽입 분할 삭제 과정**
   * [https://velog.io/@chanyoung1998/B%ED%8A%B8%EB%A6%AC](https://velog.io/@chanyoung1998/B%ED%8A%B8%EB%A6%AC)
 
+
+
 ### 🍍 B+Tree
 
 <figure><img src="../.gitbook/assets/image (90).png" alt=""><figcaption><p><a href="https://blog.jcole.us/2013/01/10/btree-index-structures-in-innodb/">https://blog.jcole.us/2013/01/10/btree-index-structures-in-innodb/</a></p></figcaption></figure>
@@ -610,11 +624,15 @@ DB와 파일 시스템에서 널리 사용되는 Self-balanced Tree입니다.
 * leaf node 는 **데이터 노드**라고 부르며, Value값에 데이터가 존재합니다.
 * 데이터베이스에서 가장 중요한 것은 **검색 속도** 이므로 대부분의 현대 데이터베이스 시스템은 B+Tree구조를 채택하고 있습니다.
 
+
+
 ### 🥭 B\*Tree
 
 * &#x20;B-Tree에서 자식 노드 수 최소 제약 조건이 2M/3개로 늘어났습니다.
 * 노드가 가득하면 분열 대신 이웃한 형제 노드로 재배치 합니다.
 * 더 이상의 재배치가 불가한 경우에 분열합니다.
+
+
 
 ### 🍎 Clustered Index 란?
 
@@ -633,12 +651,16 @@ DB와 파일 시스템에서 널리 사용되는 Self-balanced Tree입니다.
 * 항상 정렬 된 방식으로 데이터를 반환해야 하는 경우에 사용하면 좋고, (Order By 대신)
 * 자주 업데이트 되지 않는 테이블에서 사용하는 것이 좋아주로 읽기 작업이 많은 경우에 사용하면 좋습니다.
 
+
+
 ### 🍏 Clustered Index를 명시적으로 설정하지 않으면 어떻게 될까요?
 
 * 보통PK를 자동 생성하여 사용한다면 데이터베이스에서는 PK가 클러스터 된 인덱스를 자동으로 생성하기 때문에 PK가 클러스터 인덱스가 됩니다.
 * InnoDB 스토리지 엔진을 사용하는 경우, 기본 키는 클러스터 인덱스로 설정됩니다.
 * 테이블에 PK를 명시적으로 정의하지 않고 테이블을 생성하는 경우, 테이블은 클러스터 인덱스 없이 생성될 수 있습니다.
 * Clusterd Index없는 테이블은 힙 구조로 데이터가 저장됩니다.
+
+
 
 ### 🍐 Nonclusterd Index 란?
 
@@ -649,6 +671,8 @@ DB와 파일 시스템에서 널리 사용되는 Self-balanced Tree입니다.
 * Index를 저장할 테이블의 약 10%정도의 추가적인 공간이 필요합니다. (인덱스가DataPage에 포함되지 않음)
 
 <figure><img src="../.gitbook/assets/image (93).png" alt=""><figcaption><p>논 클러스터형 예시</p></figcaption></figure>
+
+
 
 ### 🍍 Clusterd와 Nonclusterd를 같이 사용할 경우
 
@@ -669,6 +693,8 @@ DB를 사용하다 보면 클러스터 인덱스와 논 클러스터 인덱스�
 
 * [https://hudi.blog/db-clustered-and-non-clustered-index/](https://hudi.blog/db-clustered-and-non-clustered-index/)
 * [https://so-what-93.tistory.com/81](https://so-what-93.tistory.com/81)
+
+
 
 ### 🍑 인덱스 실행 계획 확인하는 방법
 
@@ -692,6 +718,8 @@ ex) `EXPLAIN SELECT * FROM your_table WHERE your_condition;`
 * 에러코드, 바이너리 로그 자체에 대한 메타데이터 등 다양한 데이터가 포함됩니다.
 * 원래는 Master DB서버를 Slave DB서버와 Replication하기 위한 것이 주목적 이였다고 합니다.
 
+
+
 ### 🍓 Binary log는 언제 사용할까?
 
 1. **복구 (Recovery)**
@@ -702,11 +730,15 @@ ex) `EXPLAIN SELECT * FROM your_table WHERE your_condition;`
    * 데이터베이스의 변경 사항을 다른 서버로 전송하여 레플리케이션 등을 구현하는데 사용됩니다.
    * 이를 통해 여러 서버 간에 데이터를 동기화 하고 가용성도 향상 시킬 수 있습니다.
 
+
+
 ### 🥝 Transaction log 란?
 
 * 트랜잭션이 커밋될 때 마다 기록이 되며 보통사용자가 읽을 수 있는 형태로 기록됩니다.
 * 트랜잭션에 대한 처리, 롤백, Crash Recovery, Point In Time Recovery 등을 위한 용도로 사용됩니다.
 * 트랜잭션 로그는 데이터 변경의 일관성을 유지하고 데이터베이스의 장애 발생 시 복구하는 데 중점을 두고 있습니다.
+
+
 
 ## 📦 트랜잭션
 
@@ -715,6 +747,8 @@ ex) `EXPLAIN SELECT * FROM your_table WHERE your_condition;`
 * 트랜잭션은 데이터의 일관성과 무결성을 보장하며 다중 클라이언트와 같이 병렬적으로 발생하는 작업에서 발생할 수 있는 데이터 부정합을 방지하고자 할 때 사용됩니다.
 * 일련의 수행을 하나의 논리적인 단위의 묶음으로 처리하며 정상적으로 성공하였을 경우에는 모든 변경사항을 저장하고,
 * 어떠한 이유들로 인하여 중간에 비정상적인 종료가 되었을 경우 모든 변경사항을 처음과 동일한 상황으로 돌아갑니다.
+
+
 
 ### 🍏 트랜잭션 4가지 특성(ACID)
 
@@ -735,6 +769,8 @@ ex) `EXPLAIN SELECT * FROM your_table WHERE your_condition;`
 
 * 트랜잭션이 성공적으로 수행되면 그 트랜잭션이 갱신한 데이터베이스의 내용은 영구적으로 저장된다.
 * 트랜잭션이 성공적으로 완료 되었을 경우, 시스템 장애 또는 기타 문제가 발생하더라도 트랜잭션의결과는 보존되어야 합니다.
+
+
 
 ### 🍐 TCL이란?
 
