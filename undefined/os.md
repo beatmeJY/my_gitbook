@@ -411,7 +411,7 @@ CPU를 자진 해서 반납할 때까지 계속 실행 되는 것을 말합니�
 
 ### 🍋 교착상태 란? (Deadlock)
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>서로 기다리며 아무일도 진행하지 못하는 상황</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>서로 기다리며 아무일도 진행하지 못하는 상황</p></figcaption></figure>
 
 * 교착 상태란 두 개 이상의 작업이 서로의 작업이 끝나기 만을 기다리며 서로 아무런 행동을 취하지 못하는 상황을 이야기 합니다.
 * 아직까진 이 문제를 해결하는 일반적인 확실한 정해진 방법은 없는 상태입니다.
@@ -544,7 +544,7 @@ CPU를 자진 해서 반납할 때까지 계속 실행 되는 것을 말합니�
 
 ### 🍏 뮤텍스 VS 세마포어
 
-<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p><a href="https://beatmejy.tistory.com/22">내 블로그 중 일부</a></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption><p><a href="https://beatmejy.tistory.com/22">내 블로그 중 일부</a></p></figcaption></figure>
 
 
 

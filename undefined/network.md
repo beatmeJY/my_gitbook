@@ -6,11 +6,11 @@
 
 <div align="left">
 
-<figure><img src="../.gitbook/assets/image.png" alt="" width="375"><figcaption><p><a href="https://nordvpn.com/ko/blog/tcp-udp-comparison/">이해를 돕기 위한 TCP 그림</a></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3).png" alt="" width="375"><figcaption><p><a href="https://nordvpn.com/ko/blog/tcp-udp-comparison/">이해를 돕기 위한 TCP 그림</a></p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/image (2).png" alt="" width="375"><figcaption><p><a href="https://nordvpn.com/ko/blog/tcp-udp-comparison/">이해를 돕기 위한 UDP 그림</a></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt="" width="375"><figcaption><p><a href="https://nordvpn.com/ko/blog/tcp-udp-comparison/">이해를 돕기 위한 UDP 그림</a></p></figcaption></figure>
 
 </div>
 
@@ -35,9 +35,16 @@
 
 
 
+### 🥭패킷의 순서가 꼬여서 도착하면 어떻게 할까요?
+
+* TCP는 순서가 꼬여서 들어오게 되면 데이터가 도착하는 순서를 보장하기 위해 OS가 수신한 데이터를 버퍼에 저장하고, 이를 TCP 스택을 통해 순서대로 조립하여 상위 계층으로 전송합니다.&#x20;
+* UDP는 순서를 보장하지 않으므로 만약에 순서가 꼬였더라도 어플리케이션 계층에서 직접 처리를 해야합니다.
+
+
+
 ### &#x20;🍉 UDP는 왜 빠를까요?
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 * UDP는 우선 연결하거나 종료할 때 발생하는 비용인 3way/4way HandShaking 과정이 없으며,
 * 전달하는 서버나 받는 서버 모두 데이터가 정합성을 검증하지 않아 작은 헤더로 구성 할 수 있고,
@@ -61,30 +68,35 @@
 * 이를 받은 클라이언트는 동일하게 body의 모든 값을 16bit 단위로 변환한 후 모두 합친 뒤,
 * 체크섬 값을 더하여 모든 값이 1로 나오는지 확인하여 쉽고 빠르게 패킷의 손상 여부를 확인할 수 있습니다.
 
-#### 📖 추가로 읽을 거리
+#### 📖 추가로 보면 좋은 내용
 
 * **체크섬 오프로드 란?**
   * 원래는 OS를 통해 CPU가 TCP의 체크섬을 계산하지만,
-  * 최근의 네트워크 카드들은 직접 체크섬을 계산하도록 하여 CPU 성능을 향상 시키는 방법입니다.
+  * 최근의 네트워크 카드들에서 직접 체크섬을 계산하도록 하여 CPU 성능을 향상 시키는 방법입니다.
 * [체크섬 오프로드 해제하는 방법](https://myknowledge.kr/29)
 
 
 
-### 🍌 LAN과 WAN의 차이에 대해서 설명해주세요.&#x20;
+### 🍌 LAN과 WAN의 차이에 대해서 설명해주세요.
+
+<figure><img src="../.gitbook/assets/image (1).png" alt="" width="563"><figcaption><p><a href="https://www.cloudflare.com/ko-kr/learning/network-layer/what-is-a-wan/">https://www.cloudflare.com/ko-kr/learning/network-layer/what-is-a-wan/</a></p></figcaption></figure>
 
 #### LAN
 
-* LAN은 로컬 네트워크에서 통신할 경우 주로 사용되며 주로 이더넷을 사용한 학교 등에서 사용됩니다.
-* 일반적으로 제한된 영역내에서 사용되며 때문에 높은 전송 속도와 대역폭을 가질 수 있습니다.&#x20;
+* LAN은 로컬 네트워크에서 통신할 경우 주로 사용되며,
+* 주로 이더넷을 사용한 학교 등에서 사용됩니다.
+* 일반적으로 제한된 영역 내에서 사용되며 때문에 높은 전송 속도와 대역폭을 가질 수 있습니다.&#x20;
+  * (쉽게 생각하면 군대나 학교에서 스타나 워크를 로컬플레이 하던 것이라 생각하면 쉽습니다.)
 
 #### WAN
 
-* WAN은 외부 네트워크와 통신할 때 주로 사용 되며 주로 인터넷을 사용하여 ISP 등을 통해 도시, 국가 간에서 사용됩니다.
+* WAN은 외부 네트워크와 통신할 때 주로 사용 되며,
+* 주로 인터넷을 사용하여 ISP 등을 통해 도시, 국가 간에서 사용됩니다.
 * 일반적으로 넓은 영역 내에서 사용되어 비교적 낮은 전송 속도와 대역폭을 가질 수 있습니다.
 
 
 
-### 🍍 네트워크 계층과 전송 계층의 차이점에 대해 설명해주세요.
+### 🍍 네트워크 계층 vs 전송 계층
 
 #### 네트워크 계층
 
@@ -96,23 +108,42 @@
 
 
 
-### 🥭패킷의 순서가 꼬여서 도착하면 어떻게 할까요?
+### 🍎 라우터 vs 스위치
 
-* TCP는 순서가 꼬여서 들어오게 되면 데이터가 도착하는 순서를 보장하기 위해 OS가 수신한 데이터를 버퍼에 저장하고, 이를 TCP 스택을 통해 순서대로 조립하여 상위 계층으로 전송합니다. UDP는 순서를 보장하지 않으므로 만약에 순서가 꼬였더라도 어플리케이션 계층에서 직접 처리를 해야합니다.
+<figure><img src="../.gitbook/assets/image (107).png" alt=""><figcaption><p><a href="https://coding-chobo.tistory.com/38">https://coding-chobo.tistory.com/38</a></p></figcaption></figure>
+
+#### 라우터
+
+* 라우터는 3계층의 네트워크 계층에 속합니다.
+* 주로 IP를 사용하여 각 장치에 전달하는 등 네트워크 간의 라우팅을 수행합니다.&#x20;
+* 서로 다른 프로토콜로 운영하는 통신망 사이에서 정보를 전송하기 위해 경로를 설정하는 역할을 하는 핵심적인 장비입니다.
+* 수신된 패킷에 의하여 자신이 연결되어있는 통신망 내의 노드를 결정하여 가장 효율 적인 경로를 선택하여 패킷을 전송해줍니다.
+
+#### 스위치
+
+* 스위치는 주로 2계층인 데이터링크 계층에 속합니다.
+* 주로 MAC 주소를 사용하여 통신하고 이더넷을 기반으로 통신하여 장치 간의 통신을 수행합니다.
+* 스위치는 자신에게 연결된 모든 디바이스들의 MAC 주소와 포트가 기록된 MAC 주소 테이블을 가지고 있습니다.
+* 만약 자신의 테이블에 없는 목적지를 가진 패킷이 오면 연결된 모든 장치에 포워딩을 합니다. (= 허브와 동일)
 
 
 
-### 🍎 라우터와 스위치의 차이에 대해서 설명해주세요.
+### 🍏 스위치 vs 허브
 
-* 라우터는 3계층의 네트워크 계층에 속하고 주로 IP를 사용하여 각 장치에 전달하는 등 네트워크 간의 라우팅을 수행합니다. 스위치는 주로 2계층인 데이터링크 계층에 속하고 주로 MAC 주소를 사용하여 통신하고 이더넷을 기반으로 통신하여 장치 간의 통신을 수행합니다.
+<figure><img src="../.gitbook/assets/image (106).png" alt="" width="563"><figcaption><p><a href="https://codebox-j.tistory.com/56">https://codebox-j.tistory.com/56</a></p></figcaption></figure>
 
+#### 허브
 
+* 허브는 1계층에서 동작하고 허브는 통신 할 경우 브로드캐스팅을 통해 연결되어 있는 모든 장치에게 전달해야합니다.
+* 허브는 모든 장치에 전송하므로 많은 충돌이 일어날 수도 있습니다.
 
-### 🍏 스위치와 허브의 차이는 무엇일까요?&#x20;
+#### 스위치
 
-* 허브는 1계층에서 동작하고 허브는 통신 할 경우 브로드캐스팅을 통해 연결되어 있는 모든 장치에게 전달해야하는 반면에
-* 스위치는 주로 2계층에서 동작하며 MAC 주소를 기반으로 정확한 목적지에만 전송을 하기 때문에 허브보다 보안과 훨씬 비용을 아낄 수 있으며 허브는 모든 장치에 전송하므로 많은 충돌이 일어날 수 있지만 스위치는 충돌이 일어날 확률이 더 낮아집니다.&#x20;
-* 최근에는 스위치의 가격도 많이 낮아져서 허브를 쓰는 대신 스위치로 주로 사용하고 있다고 합니다.
+* 스위치는 주로 2계층에서 동작하며 MAC 주소를 기반으로 정확한 목적지에만 전송합니다.
+* 때문에 허브보다 보안에도 좋고 비용도 훨씬 아낄 수 있으며,
+* 스위치는 충돌이 일어날 확률이 더 낮아집니다.&#x20;
+
+최근에는 스위치의 가격도 많이 낮아져서 허브를 쓰는 대신 스위치로 주로 사용하고 있다고 합니다.
 
 
 
@@ -171,7 +202,7 @@
 
     <figure><img src="../.gitbook/assets/image (70).png" alt="" width="320"><figcaption><p><a href="https://www.elancer.co.kr/blog/view?seq=74">https://www.elancer.co.kr/blog/view?seq=74</a></p></figcaption></figure>
 
-    * 통합자원 식별자로 인터넷의 자원을 나타내는 유일한 주소입니다.
+    * 통합 자원 식별자로 인터넷의 자원을 나타내는 유일한 주소입니다.
     * URI의 하위 개념으로 URL과 URN이 있습니다.
     * 쉽게 생각해서 어떠한 주소가 URL이 아니고 URN도 아니더라도 어떤 형태로든 리소스를 식별 할 수 있다면 URI입니다.
 * **URL** (Uniform Resource Locator)
