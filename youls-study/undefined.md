@@ -16,5 +16,7 @@
 
 ###
 
+### 메시지 라우팅 프레임워크
 
+[RabbitMQ vs Kafka 차이](https://tanzu.vmware.com/content/blog/understanding-the-differences-between-rabbitmq-vs-kafka)
 
