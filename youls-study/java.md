@@ -1,19 +1,23 @@
+---
+description: 🍇🍈🍉🍊🍋🍌🍍🥭🍎🍏🍐🍑🍒🍓🥝🥑
+---
+
 # ☕ JAVA
 
 ## 🦾 컴파일 & 메모리
 
-### 자바는 컴파일언어일까 인터프리터 언어일까?
+### 🍇 자바는 컴파일언어일까 인터프리터 언어일까?
 
 자바는 컴파일과 인터프리터 두 방식을 모두 사용하고 있습니다.
 
-### 자바는 왜 컴파일을 할까?
+### 🍈 자바는 왜 컴파일을 할까?
 
 * 자바는 고수준 언어에서 작성 된 Java파일을 컴파일하여 바이트 코드인 class파일로 컴파일하는 작업을 하게 됩니다.
 * 이는 한번 작성한 코드를 어느 운영체제에서든 실행 가능하도록 한 자바의 목적에 의해서 JVM만 있다면 어디서든 동작이 가능하도록 JVM이 이해할 수 있는 바이트코드로 변환하기 위해 이러한 작업을 거치게 됩니다.
 
 
 
-### 자바의 컴파일 과정은?
+### 🍉 자바의 컴파일 과정은?
 
 <figure><img src="../.gitbook/assets/image (118).png" alt=""><figcaption><p><a href="https://velog.io/@mooh2jj/JIT-%EC%BB%B4%ED%8C%8C%EC%9D%BC%EB%9F%AC%EB%9E%80">https://velog.io/@mooh2jj/JIT-%EC%BB%B4%ED%8C%8C%EC%9D%BC%EB%9F%AC%EB%9E%80</a> 참조</p></figcaption></figure>
 
@@ -25,19 +29,36 @@
 
 
 
+### 🍊 JRE와 JDK의 차이점은?
+
+* **JRE**는 미리 작성된 자바코드를 실행시키기 위해서만 사용되고,
+* **JDK**는 JRE 기능을 포함하며 개발자가 자바를 개발하는데 사용할 수 있도록 컴파일러, jar 등을 추가로 제공합니다.
+
+
+
 ### 자바의 참조 레퍼런스 4바이트와 8바이트일 때의 차이
 
 
 
 ### byte, short, int, long, double, float, char, string boolean 메모리 할당 크기는?
 
-
+* byte: 1 byte
+* short: 2 byte
+* int: 4 byte
+* long: 8 byte
+* float: 4 byte
+* double: 8 byte
+* char: 2 byte
+* string:&#x20;
+* boolean: 1 byte
 
 ### 자바의 데이터 구조
 
 
 
-### 런타임 컨스턴트 풀이랑 컨스턴트 풀 차이는?
+### Runtime Constant Pool과 Constant Pool 차이는?
+
+### Constant Pool과 String Constant Pool 차이는?
 
 
 
@@ -178,13 +199,20 @@ public class Zoo {
 
 ## 🗑️ 가비지 컬렉터 (GC)
 
-###
-
 ### Minor GC란?
 
 
 
 ### Major GC란?
+
+
+
+### Garbage 판단 기준
+
+* 힙 내에서 다른 객체에 의한 참조
+* Java 스택에 의한 참조 (Java 메서드 실행 시 사용하는 지역변수나 파라미터 변수)
+* JNI에 의한 참조 (Java Native Interface에서 생성한 객체)
+* Method Area의 static 변수에 의한 참조
 
 
 
