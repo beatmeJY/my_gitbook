@@ -124,7 +124,7 @@ description: 🍇🍈🍉🍊🍋🍌🍑🍐🍏🍎🥭🍍🍒🍓🥝🥑
 
 
 
-## DI(Dependency Injection)
+## 의존성 관련 (Dependency Injection)
 
 ### 🍏 Autowired vs Resources vs Inject
 
@@ -243,6 +243,14 @@ public class car {
 
 * 제어의 역전(Inversion Of Control) 이라고 불리며 스프링에서도 채택되어 사용되고 있는 소프트웨어 디자인패턴 중 하나입니다.
 * 주로 의존성 주입(DI)와 함께 사용되며 객체의 생성, 생명 주기, 의존성 관리 등을 개발자가 아닌 외부에 위임하는 것을 목적으로 합니다.
+
+
+
+### 왜 스프링은 Bean을 프록시 객체로 감싸서 등록할까?
+
+
+
+### 스프링의Bean 등록 과정
 
 
 
