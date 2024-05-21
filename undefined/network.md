@@ -6,11 +6,11 @@
 
 <div align="left">
 
-<figure><img src="../.gitbook/assets/image (3).png" alt="" width="375"><figcaption><p><a href="https://nordvpn.com/ko/blog/tcp-udp-comparison/">이해를 돕기 위한 TCP 그림</a></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt="" width="375"><figcaption><p><a href="https://nordvpn.com/ko/blog/tcp-udp-comparison/">이해를 돕기 위한 TCP 그림</a></p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt="" width="375"><figcaption><p><a href="https://nordvpn.com/ko/blog/tcp-udp-comparison/">이해를 돕기 위한 UDP 그림</a></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt="" width="375"><figcaption><p><a href="https://nordvpn.com/ko/blog/tcp-udp-comparison/">이해를 돕기 위한 UDP 그림</a></p></figcaption></figure>
 
 </div>
 
@@ -33,7 +33,7 @@
 
 ### 🍉 UDP는 왜 빠를까요?
 
-<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * UDP는 우선 연결하거나 종료할 때 발생하는 비용인 3way/4way HandShaking 과정이 없으며,
 * 전달하는 서버나 받는 서버 모두 데이터가 정합성을 검증하지 않아 작은 헤더로 구성 할 수 있고,
@@ -62,7 +62,7 @@
 
 ### 🍌 LAN과 WAN의 차이에 대해서 설명해주세요.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt="" width="563"><figcaption><p><a href="https://www.cloudflare.com/ko-kr/learning/network-layer/what-is-a-wan/">https://www.cloudflare.com/ko-kr/learning/network-layer/what-is-a-wan/</a></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt="" width="563"><figcaption><p><a href="https://www.cloudflare.com/ko-kr/learning/network-layer/what-is-a-wan/">https://www.cloudflare.com/ko-kr/learning/network-layer/what-is-a-wan/</a></p></figcaption></figure>
 
 #### LAN
 
@@ -166,35 +166,26 @@
 
 <figure><img src="../.gitbook/assets/image (75).png" alt=""><figcaption><p><a href="https://danielmiessler.com/p/difference-between-uri-url/">https://danielmiessler.com/p/difference-between-uri-url/</a></p></figcaption></figure>
 
-* **URI** (Uniform Resource Identifier)
-*
+#### **URI** (Uniform Resource Identifier)
 
-```
-<figure><img src="../.gitbook/assets/image (70).png" alt="" width="320"><figcaption><p><a href="https://www.elancer.co.kr/blog/view?seq=74">https://www.elancer.co.kr/blog/view?seq=74</a></p></figcaption></figure>
-```
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-```
-* 통합 자원 식별자로 인터넷의 자원을 나타내는 유일한 주소입니다.
+* 통합 자원 식별자로 인터넷 자원을 나타내는 유일한 주소입니다.
 * URI의 하위 개념으로 URL과 URN이 있습니다.
 * 쉽게 생각해서 어떠한 주소가 URL이 아니고 URN도 아니더라도 어떤 형태로든 리소스를 식별 할 수 있다면 URI입니다.
-```
 
-* **URL** (Uniform Resource Locator)
-*
+#### **URL** (Uniform Resource Locator)
 
-```
-<figure><img src="../.gitbook/assets/image (69).png" alt="" width="320"><figcaption><p><a href="https://www.elancer.co.kr/blog/view?seq=74">https://www.elancer.co.kr/blog/view?seq=74</a></p></figcaption></figure>
-```
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
-```
 * 통합 자원 위치로 자원이 어디에 있는지 위치를 알려주기 위한 규약입니다.
-* URL은 웹 사이트 주소뿐만 아니라 컴퓨터 네트워크상의 자원을 모두 나타내는 표기법입니다.
+* URL은 웹 사이트 주소뿐만 아니라 컴퓨터 네트워크 상의 자원을 모두 나타내는 표기법입니다.
 * 쉽게 생각해서 **프로토콜과 리소스**를 **모두 포함** 한다고 생각하면 좋습니다.
-```
 
-* **URN** (Uniform Resource Name)
-  * 자원 이름으로 웹 문서의 물리적인 위치와 상관없이 웹 문서 자체를 나타냅니다.
-  * 쉽게말해 리소스를 어떻게 접근할 것인지 명시하지 않고 경로와 **리소스 자체를 특정**하는 것 입니다.
+#### **URN** (Uniform Resource Name)
+
+* 자원 이름으로 웹 문서의 물리적인 위치와 상관없이 웹 문서 자체를 나타냅니다.
+* 쉽게 말해 리소스를 어떻게 접근할 것인지 명시하지 않고 경로와 **리소스 자체를 특정**하는 것 입니다.
 
 <figure><img src="../.gitbook/assets/image (76).png" alt=""><figcaption><p><a href="https://danielmiessler.com/p/difference-between-uri-url/">https://danielmiessler.com/p/difference-between-uri-url/</a></p></figcaption></figure>
 
@@ -204,14 +195,16 @@
 * URL은 프로토콜을 포함한 리소스의 위치를 나타내며,
 * URN은 리소스의 위치를 나타내지 않고 리소스의 고유한 이름을 나타내는 것 입니다.
 
-### 🍉 Stateless에 대해 설명해주세요.
+
+
+### 🍉 Stateless 이란?
 
 * 상태유지를 하지 않는(무상태) 방법입니다.
 * 무상태란 클라이언트와 서버 사이에서 서버가 클라이언트의 상태를 보존하지 않는 것입니다.
 * 쉽게 말해 서버가 상태를 기억하지 않으므로 클라이언트가 통신에 필요한 모든 정보를 통신 할 때 마다 실어서 보내는 것입니다.
 * 클라이언트가 통신할 때마다 모든 정보를 보내야 하는 단점이 있지만, 서버의 자원을 아낄 수 있고 여러 서버를 사용하는 서버에서도 상태를 기억하고 있지 않기 때문에 어느 서버든 요청을 처리 할 수 있습니다.
 
-### 🍊 Stateful에 대해서 설명해주세요
+### 🍊 Stateful 이란?
 
 * 상태 유지를 하는 방법입니다.
 * 상태 유지란 클라이언트와 서버 사이에서 서버가 클라이언트 상태는 보존하는 것입니다.
@@ -219,7 +212,9 @@
 * stateful의 문제는 서버가 여러 서버를 사용할 때 원래 통신하던 서버에 오류가 발생 시 기억된 상태가 없어져서 다른 서버에서도 처리 할 수 없습니다.
   * 예를 들어 로그인을 하고 상품을 결제 하려는데 사용자 정보가 사라짐.
 
-### 🍋 사용자 요청에서 어떻게 사용자를 구분 할 수 있을까요?
+
+
+### 🍋 사용자 요청에서 어떻게 사용자를 구분 할 수 있을까?
 
 #### **간단하게 식별하기 위해서는**
 
@@ -239,10 +234,20 @@
 * **JWT**
   * JWT는 서버에 상태를 저장하지 않아 무상태(StateLess)하게 사용자를 식별할 수 있습니다. 따라서 서버의 확장성, 성능, 인증서버와 리소스서버 분리 등 다양한 장점을 얻을 수 있습니다.
 
+
+
+### 🍑 REST API 란 무엇일까요?
+
+
+
+
+
 ### 🍌 PUT과 PATCH의 차이에 대해 설명해주세요
 
 * PUT와 PATCH는 일반적으로 리소스의 업데이트를 위한 HTTP 메서드로 사용되지만 가장 큰 차이점은 PUT은 전체를 업데이트(덮어쓰기) 하는 반면 PATCH는 일부만(바뀐내용만 수정) 업데이트를 합니다.
 * 따라서 PUT과 PATCH는 멱등성을 가지는것이 원칙이지만 PATCH의 경우는 상황에 따라 보장되지 않을 수도 있습니다.
+
+
 
 ### 🍍 DNS Round Robin에 대해 설명해주세요.
 
@@ -250,10 +255,14 @@
 * 단점으로는 트래픽을 고르게 분산하기 위해 여러 IP를 사용하는 것이지만 클라이언트가 DNS캐시를 재사용할 경우 발생할 수 있는 트래픽 부하, 재갱신 오류 등이 발생 할 수 있고
 * Round Robin DNS는 실제 로드밸런싱이 하는 백앤드서버의 헬스체크와 같은 작업을 하지 못하여 서버의 상태를 알지 못하므로 오류가 발생한 서버가 있어도 DNS조회 결과에 반영될 수 있습니다.
 
+
+
 ### 🥭DNS Resolver에 대해 설명해주세요.
 
 * 사용자가 도메인 이름을 입력했을 때 사용자의 컴퓨터나 네트워크 장치에서 DNS 쿼리를 생성하고 해당 쿼리를 DNS서버에 연결하여 전송한 뒤 응답을 받아오는 소프트웨어 또는 서비스 입니다.
 * DNS Resolver는 일반적인 사용자나 소규모 네트워크에서는 주로 OS나ISP의 공유기에 내장되어 있습니다.
+
+
 
 ### 🍎DNS 재귀적 질의와 반복적 질의에 대해 설명해주세요.
 
@@ -274,6 +283,8 @@
 * **재귀적 질의**는 DNS 서버에 한번만 질의하면 DNS 서버가 대신해서 그 질문에 대한 답을 끝까지 찾아 주므로 사용자 친화적이고,
 * **반복적 질의**는 DNS 서버가 다른 DNS 서버를 알려주고 클라이언트가 직접적으로 반복하여 결과를 얻을 때 까지 질의를 해야 하므로 편리성이 떨어질 수 있으나 대규모 트래픽이 발생하는 경우엔 DNS 서버의 부하를 줄일 수 있습니다.
 
+
+
 ### 🍏DNS에서 사용되는 프로토콜은 어떤 걸까요?
 
 * DNS의 프로토콜은 일반적으로 UDP를 사용합니다.
@@ -286,6 +297,8 @@
       * **권한 섹션(Authority Section):** 찾은 정보에 대한 권한이 있는 DNS 서버의 정보
       * **추가 섹션(Additional Section):** 이는 주로 캐싱을 위한 정보를 담습니다.
 
+
+
 ### 🍐멱등성에 대해 설명해주세요.
 
 * 멱등성이란 어떤 작업이 여러 번 수행 되더라도 결과가 변하지 않는 성질을 말합니다.
@@ -294,6 +307,8 @@
   * 위에서 설명 드렸던 동일한PUT(PATCH) 메서드의 멱등성 보장과,
   * DB에서는 한 트랜잭션 내에서의 동일한 정보를 (수정없이) 여러 번 조회 시 항상 같은 값을 반환해야 하는 성질들도 멱등성이 필요한 상태라고 볼 수 있습니다.
 
+
+
 ## 🍪 쿠키와 세션
 
 ### 🍇 쿠키와 세션을 사용하는이유
@@ -301,6 +316,8 @@
 * HTTP는 비연결성으로 서버에 요청을 전송할 때에는 항상서버와의 새 연결을 진행해야 합니다.
 * 따라서 이전 요청에 대해서는 새로운 연결 요청이 이루어지게 되므로 기억하고 있지 않습니다.
 * 그걸 위해 쿠키나 세션을 사용하게 되면 이전 요청에서의 정보를 기억하여 사용자는 로그인 등을 다시 진행하지 않고 해당 정보 등을 함께 전송하여 매 요청마다 번거로운 작업을 피하고 더 유용하게 사이트를 활용 할 수 있게 됩니다.
+
+
 
 ### 🍉 세션의 저장 방식
 
@@ -319,11 +336,15 @@
   * 빠른 응답과 영속성을 동시에 제공합니다.
   * 다중 서버 간 세션 공유가 가능합니다.
 
+
+
 ### 🍊 세션이 날아가면 어떻게 해야할까?
 
 * 우선 세션 정보가 없다면 공통적으로 재 로그인을 통해 세션을 다시 발급을 받는 로직을 작성을 해야할 것 같습니다.
 * 이 때 사용자에게 "일시 장애를 통한 오류로 재 로그인을 부탁드린다"는 메시지 등을 잘 전달하여 사용자 경험을 향상 시키고
 * 해당 예외발생 로직에 로깅을 하고 로그를 통해 발생한 경위를 최대한 추적하여 반복하여 발생하지 않도록 막는 것이 중요할 것 같습니다.
+
+
 
 ### 🍋 쿠키의 단점에 대해 설명해주세요
 
@@ -333,6 +354,8 @@
   * 브라우저마다 다르지만 보통 최대 4KB로 많은 양의 데이터를 쿠키에 저장 할 수 없습니다.
 * **성능 저하**
   * 또한 쿠키의 양이 많고 매 요청마다 모든 쿠키가 전송된다면 성능저하 문제도 발생 할 수 있습니다.
+
+
 
 ### 🍌 쿠키와 세션 차이점
 
@@ -351,6 +374,8 @@
 * 일반적으로 브라우저를 닫거나 일정 시간 동안 활동이 없을 경우 소멸됩니다.
 * 주로 세션을 사용하는 동안 유지되어야 하는 사용자 로그인 정보 등을 저장합니다.
 
+
+
 ### 🍍 쿠키와 세션을 조작할 수 있는데 어떻게 해야할까
 
 * 주로 쿠키와 세션을 조작하는 것은 악의적인 사용자가 보안을 위협하는 행위로 간주됩니다.
@@ -358,6 +383,8 @@
 * 세션키도 탈취 당할 가능성이 있으므로 서버에서 세션에 민감한 정보를 저장하지 않아야 하며,
 * 세션의 유효시간을 적절하게 설정해주어야 하고
 * 쿠키와 세션의 사용에 대한 최소한의 필요성만 고려하여 설계해야 합니다.
+
+
 
 ## 🪙 JWT
 
@@ -368,8 +395,10 @@
 * 간결하고 경량적인 형식으로 표현이 가능해서 HTTP 헤더에 포함하여 쉽게 전송 가능합니다.
 * 클레임(claim)이라는 정보를 포함 할 수 있어서 사용자의 식별 정보, 권한 등을 토큰에 포함 시켜 전달 할 수 있습니다.
 
+
+
 ### 🍎 JWT의 단점
 
-* 토큰이 한번 발급되면 변경이 불가능 하므로 내용을 변경하거나 취소하려면 서버에서 토큰을 검증하고 갱신하는 방법이 필요합니다.
+* 토큰이 한번 발급 되면 변경이 불가능 하므로 내용을 변경하거나 취소하려면 서버에서 토큰을 검증하고 갱신하는 방법이 필요합니다.
 * 토큰은 클레임, 서명 등 많은 정보를 포함하므로 상당한 크기가 될수 있어 매 요청에 포함될 경우 네트워크 부하를 유발 할 수 도 있습니다.
 * 토큰이 탈취 당하거나 XSS 등의 스크립트 공격에 취약할 수 있습니다.

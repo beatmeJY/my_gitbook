@@ -196,7 +196,7 @@ pubic class MemberDao{
 
 #### 생성자 주입 방법
 
-```
+```java
 public class Car { 
     private Engine engine;
     public Car(Engine engine) {
@@ -210,7 +210,7 @@ public class Car {
 
 #### 수정자(Setter) 주입  방법
 
-```
+```java
 public class Car {
     private Engine engine;
     public void setEngine(Engine engine) {
@@ -224,7 +224,7 @@ public class Car {
 
 #### 필드주입 방법
 
-```
+```java
 public class car { 
     @Autowired
     private Engine engine;
