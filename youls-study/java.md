@@ -173,6 +173,21 @@ public class Zoo {
 
 
 
+### BigDecimal을 왜 사용할까?
+
+* 자바에선 기본적으로 실수를 처리하는데 float와 double의 기본 자료형을 제공하고 있습니다.
+* 하지만 이 자료형 모두 컴퓨터가 숫자 연산을 더 효율적으로 하기 위해 부동소수점을 사용한 2진수 형태로 변환하여 저장을 하게 됩니다.
+* 이 과정에서 소수 부분이 2진수로 변환할 때 무한 소수가 발생하게 되는데 이는 각 메모리의 한계로 인해 나머지가 반올림 등으로 버려지기 때문에 정확한 값을 얻을 수가 없습니다.
+* 때문에 금융권과 같이 중요한 계산이 이루어져야 할 경우에는 BigDecimal를 사용하여 10진수 방식으로 계산을 하여 정확한 소수점 자리까지도 계산이 가능하도록 해야 합니다.
+
+
+
+#### 📚 참고자료
+
+* [부동 소수점의 이해 (1부)](https://devocean.sk.com/blog/techBoardDetail.do?ID=165270\&boardType=techBlog)
+* [부동 소수점의 이해 (2부)](https://devocean.sk.com/blog/techBoardDetail.do?page=\&boardType=undefined\&query=\&ID=165276\&searchData=\&subIndex=)
+* [BigInteger와 BigDecimal](https://hudi.blog/java-biginteger-bigdecimal/)
+
 ## 🧩 객체 지향
 
 해결해야 할 문제 상황에 대하여 데이터와 이 데이터를 사용하는 기능을 하나의 객체로 묶어 책임을 분리하고 이러한 객체들의 협력적인 관계를 통해 문제를 해결하는 프로그래밍 패러다임입니다.
