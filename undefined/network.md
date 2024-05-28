@@ -10,7 +10,7 @@
 
  
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt="" width="375"><figcaption><p><a href="https://nordvpn.com/ko/blog/tcp-udp-comparison/">이해를 돕기 위한 UDP 그림</a></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt="" width="375"><figcaption><p><a href="https://nordvpn.com/ko/blog/tcp-udp-comparison/">이해를 돕기 위한 UDP 그림</a></p></figcaption></figure>
 
 </div>
 
@@ -62,7 +62,7 @@
 
 ### 🍌 LAN과 WAN의 차이에 대해서 설명해주세요.
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt="" width="563"><figcaption><p><a href="https://www.cloudflare.com/ko-kr/learning/network-layer/what-is-a-wan/">https://www.cloudflare.com/ko-kr/learning/network-layer/what-is-a-wan/</a></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt="" width="563"><figcaption><p><a href="https://www.cloudflare.com/ko-kr/learning/network-layer/what-is-a-wan/">https://www.cloudflare.com/ko-kr/learning/network-layer/what-is-a-wan/</a></p></figcaption></figure>
 
 #### LAN
 
@@ -168,7 +168,7 @@
 
 #### **URI** (Uniform Resource Identifier)
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 * 통합 자원 식별자로 인터넷 자원을 나타내는 유일한 주소입니다.
 * URI의 하위 개념으로 URL과 URN이 있습니다.
@@ -176,7 +176,7 @@
 
 #### **URL** (Uniform Resource Locator)
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 통합 자원 위치로 자원이 어디에 있는지 위치를 알려주기 위한 규약입니다.
 * URL은 웹 사이트 주소뿐만 아니라 컴퓨터 네트워크 상의 자원을 모두 나타내는 표기법입니다.
