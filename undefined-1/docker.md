@@ -1,6 +1,6 @@
 # docker 사용법
 
-#### 도커 컴포즈 실행ㄴ
+#### 도커 컴포즈 실행
 
 ```python
 docker-compose up -d
