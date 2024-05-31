@@ -7,18 +7,21 @@
 * [💻 OS](undefined/os.md)
 * [💾 DB](undefined/db.md)
 
-## 📖 Youls' Study
+## ✏️ Youls' Study
 
-* [📚 참고자료](youls-study/undefined.md)
+* [📖 참고자료](youls-study/undefined.md)
 * [☕ JAVA](youls-study/java.md)
 
-## Book
+## 📚 Book
 
 * [개발자를 위한 레디스](book/undefined/README.md)
-  * [챕터 1](book/undefined/1.md)
+  * [Chapter 1](book/undefined/chapter-1.md)
 
-## 프로그램 사용법
+## ⌨️ Programming command
 
-* [docker 사용법](undefined-1/docker.md)
-* [Java](undefined-1/java.md)
-* [mysql](undefined-1/mysql.md)
+* [Infra](programming-command/infra/README.md)
+  * [docker](programming-command/infra/docker.md)
+* [Language](programming-command/language/README.md)
+  * [Java](programming-command/language/java.md)
+* [Database](programming-command/database/README.md)
+  * [mysql](programming-command/database/mysql.md)
