@@ -8,6 +8,12 @@
 
 
 
+### **사용자 삭제 시 상태코드** <a href="#undefined" id="undefined"></a>
+
+* [HTTP Status Code 204의 재밌는점 ](https://hyeonproject.medium.com/http-status-code-204%EC%9D%98-%EC%9E%AC%EB%B0%8C%EB%8A%94-%EC%A0%90-dbb7e8ef26da)
+* [DELETE - HTTP | MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/DELETE)
+* [204 No Content - HTTP | MD](https://developer.mozilla.org/ko/docs/Web/HTTP/Status/204)
+
 ## JAVA
 
 ### [Java에서 문자열이 숫자인지 확인하는 방법](https://stackoverflow.com/questions/1102891/how-to-check-if-a-string-is-numeric-in-java)

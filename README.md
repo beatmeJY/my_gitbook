@@ -84,7 +84,7 @@ public interface StudyRepository extends JpaRepository<Study, Long> {
 * Spring JPA는 내부적으로 메서드 이름을 정규식으로 읽어서 이름을 적절히 분석하여 Query로 만들어 준다.
 * Spring Data의 공식 문서에 따르면 아래 사진과 같은 Keyword 로 인식할 수 있다.
 
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption><p><a href="https://docs.spring.io/spring-data/jpa/reference/jpa/query-methods.html">https://docs.spring.io/spring-data/jpa/reference/jpa/query-methods.html</a></p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1) (1).png" alt=""><figcaption><p><a href="https://docs.spring.io/spring-data/jpa/reference/jpa/query-methods.html">https://docs.spring.io/spring-data/jpa/reference/jpa/query-methods.html</a></p></figcaption></figure>
 
 
 
