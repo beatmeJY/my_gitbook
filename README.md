@@ -1,12 +1,8 @@
----
-description: 🍇🍈🍉🍊🍋🍌🍑🍐🍏🍎🥭🍍🍒🍓🥝🥑
----
-
 # 🌻 Spring
 
 ## 기타
 
-### 🍇 스프링 vs 스프링부트
+### 스프링 vs 스프링부트
 
 * 스프링부트는 스프링을 보다 더 쉽게 개발 할 수 있도록 사용합니다.
 * 주로 XML 등의 기본설정들을 자동으로 해주고 ,
@@ -15,7 +11,7 @@ description: 🍇🍈🍉🍊🍋🍌🍑🍐🍏🍎🥭🍍🍒🍓🥝🥑
 
 
 
-### 🍈 스프링부트 3.x버전을 사용한 이유
+### 스프링부트 3.x버전을 사용한 이유
 
 * SpringBoot 2.0은 23년 11월까지만 공식지원이 되어 이제 지원은 종료되었기 때문에 새로운 버전에 대한 학습이 필요하다고 판단을 했습니다.
 * 또한 스프링부트 3.x부터는 Java17을 기본으로 채택하고 있기 때문에 Java17을 추가로 학습하며 진행 할 수 있습니다.
@@ -28,7 +24,7 @@ description: 🍇🍈🍉🍊🍋🍌🍑🍐🍏🍎🥭🍍🍒🍓🥝🥑
 
 
 
-### 🍉 라이브러리 vs 프레임워크
+### 라이브러리 vs 프레임워크
 
 
 
@@ -39,9 +35,9 @@ description: 🍇🍈🍉🍊🍋🍌🍑🍐🍏🍎🥭🍍🍒🍓🥝🥑
 | 코드 구성 | 라이브러리는 일반적으로 독립적으로 사용      | 애플리케이션의 구조를 정의       |
 | 예시    | JQuery, Thymeleaf 등        | Spring, Django 등     |
 
-###
 
-### 🍊 WAS vs Web Server
+
+### WAS vs Web Server
 
 #### Web Server
 
@@ -138,7 +134,7 @@ public interface StudyRepository extends JpaRepository<Study, Long> {
 
 ## 동작원리
 
-### 🍋 Dispatcher Servlet 동작과정
+### Dispatcher Servlet 동작과정
 
 <figure><img src=".gitbook/assets/image (63).png" alt=""><figcaption></figcaption></figure>
 
@@ -165,7 +161,7 @@ public interface StudyRepository extends JpaRepository<Study, Long> {
 
 
 
-### 🍑 Dispatcher Servlet는 동기 vs 비동기?
+### Dispatcher Servlet는 동기 vs 비동기?
 
 * 간단한 동작 환경에선 별도의 설정 없이 **동기로 처리하는 것이 일반적**입니다.
 * 긴 응답이 필요하거나 높은 성능이 필요한 상황에서는 **비동기로 처리하여 효율**을 낼 수 있습니다.
@@ -175,7 +171,7 @@ public interface StudyRepository extends JpaRepository<Study, Long> {
 
 
 
-### 🍐 톰캣의 동작 과정
+### 톰캣의 동작 과정
 
 <figure><img src=".gitbook/assets/image (65).png" alt=""><figcaption><p><a href="https://velog.io/@jihoson94/Servlet-Container-%EC%A0%95%EB%A6%AC">https://velog.io/@jihoson94/Servlet-Container-%EC%A0%95%EB%A6%AC</a></p></figcaption></figure>
 
@@ -204,7 +200,7 @@ public interface StudyRepository extends JpaRepository<Study, Long> {
 
 ## 의존성 관련 (Dependency Injection)
 
-### 🍏 Autowired vs Resources vs Inject
+### Autowired vs Resources vs Inject
 
 #### Autowired
 
@@ -226,7 +222,7 @@ public interface StudyRepository extends JpaRepository<Study, Long> {
 
 
 
-### 🥝  @Qualifier란
+### @Qualifier란
 
 * 만약에 타입이 동일한 bean객체가 여러개 있으면 Spring이 Exception을 일으킵니다.
 * 때문에Spring 에서 여러 빈 중 어떤 빈을 주입할지를 지정하기 위한 어노테이션입니다.
@@ -244,7 +240,7 @@ pubic class MemberDao{
 
 
 
-### 🍎 Spring의 DI란?
+### Spring의 DI란?
 
 <figure><img src=".gitbook/assets/image (104).png" alt="" width="563"><figcaption><p><a href="https://velog.io/@damiano1027/Spring-%EC%9D%98%EC%A1%B4%EC%84%B1-%EC%A3%BC%EC%9E%85-%EC%A0%9C%EC%96%B4%EC%9D%98-%EC%97%AD%EC%A0%84">https://velog.io/@damiano1027/Spring-%EC%9D%98%EC%A1%B4%EC%84%B1-%EC%A3%BC%EC%9E%85-%EC%A0%9C%EC%96%B4%EC%9D%98-%EC%97%AD%EC%A0%84</a></p></figcaption></figure>
 
@@ -252,7 +248,7 @@ pubic class MemberDao{
 
 
 
-### 🍍 DI의 장점은?
+### DI의 장점은?
 
 * 컴포넌트 간의 강합 결합을 피할 수 있어 유연성과 유지보수에 효과적입니다.
 * 이는 구현 자체를 수정하지 않고도 새로운 구현체로 교체하거나 주입 받는 대상을 변경 할 수 있습니다.
@@ -261,7 +257,7 @@ pubic class MemberDao{
 
 
 
-### 🥭 DI의 단점은?
+### DI의 단점은?
 
 * 실행(런타임) 시 주입하여 컴파일 시에 오류가 발생하지 않아 디버깅에 어려움이 생길 수 있습니다.
 * 큰 프로젝트에서는 컴포넌트 간의 관계를 정의하고 설정하기에 해야 하는 작업이 늘어납니다.
@@ -270,7 +266,7 @@ pubic class MemberDao{
 
 
 
-### 🥑 DI의 3가지 방법
+### DI의 3가지 방법
 
 #### 생성자 주입 방법
 
@@ -315,7 +311,7 @@ public class car {
 
 
 
-### 🍒 IOC 란?
+### IOC 란?
 
 <figure><img src=".gitbook/assets/image (105).png" alt=""><figcaption><p><a href="https://www.codingknownsense.com/inversion-of-control-and-dependency-injection/">https://www.codingknownsense.com/inversion-of-control-and-dependency-injection/</a></p></figcaption></figure>
 
@@ -348,7 +344,7 @@ public class car {
 
 ## 테스트
 
-### 🍓 목 객체를 사용하는 이유가 무엇일까요?
+### 목 객체를 사용하는 이유가 무엇일까요?
 
 * 주로 단위 테스트를 하기 위해서 사용합니다.
 * 테스트 시에 주로 다른 특정 클래스나 모듈이 다른 클래스나 모듈에 의존하게 됩니다.
