@@ -206,7 +206,7 @@
 
 ### 🍈크로스 조인이 왜 성능상 좋지 않을까요?
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 두 테이블의 행 수를 곱한 만큼의 결과를 생성하기 때문에 행의 수가 많은 경우 성능상의 문제가 발생 할 수 있습니다.&#x20;
 
