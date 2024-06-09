@@ -16,6 +16,8 @@
 
 * [개발자를 위한 레디스](book/undefined/README.md)
   * [Chapter 1](book/undefined/chapter-1.md)
+  * [Chapter 2](book/undefined/chapter-2.md)
+  * [Chapter 3](book/undefined/chapter-3.md)
 
 ## ⌨️ Programming command
 
