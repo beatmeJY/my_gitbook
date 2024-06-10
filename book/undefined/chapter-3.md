@@ -185,18 +185,100 @@ ZRANGE score:240610 1 2 WITHSCORES REV (역순)
 > "user:C"
 > "user:A"
 
-ZRANGE score:240610 100 150 BYSCORE
+ZRANGE score:240610 100 150 BYSCORE WITHSCORES
+ZRANGE score:240610 200 +inf BYSCORE WITHSCORES
+
+ZADD mySortedSet 0 a 0 b 0 c 0 d 0 e
+ZRANGE mySortedSet (b [e BYLEX
+> b
+> c
+> d
 ```
 
-* ZRANGE: Sorted Set에 저장된 데이터를 조회할 수 있으며 start와 stop 범위를 항상 입력해야 한다.
-  * 인덱스로 데이터 조회:&#x20;
-  * 스코어로 데이터 조회:&#x20;
-  * 사전순으로 데이터 조회:&#x20;
+* **ZRANGE**: Sorted Set에 저장된 데이터를 조회할 수 있으며 start와 stop 범위를 항상 입력해야 한다.
+  * **인덱스로 데이터 조회**:&#x20;
+    * WITHSCORES 를 사용하면 데이터와 스코어 값이 순서대로 출력된다.
+  * **스코어로 데이터 조회**:&#x20;
+    * BYSCORE 를 사용하여 위의 예시에선 100 이상 150 이하인 값을 조회하라는 것을 의미한다.
+    * `(`를 포함하면 해당 값은 포함하지 않는 값만 조회한다.&#x20;
+      * `100 150`일 경우 100 초과 150 이하
+    * \+inf, -inf 값을 이용해 \~보다 큰값 \~ 보다 작은 값을 출력할 수 있다.&#x20;
+      * `200 +inf`일 경우 200 이상의 값 모두 조회.
+      * `-inf +inf` 일 경우 모든 데이터 조회.
+  * **사전순으로 데이터 조회**:&#x20;
+    * BYLEX 를 사용하면 사전식 순서를 이용해 특정 아이템을 조회할 수 있다,
+    * BYLEX에선 `(`가 해당 문자를 포함하며 `[`가 해당 문자를 포함하지 않을 때 사용한다.
+    * 가장 첫 문자는 `-`로 가장 마지막 문자는 `+`로 대체할 수 있다.
+    * 문자열은 ASCII 바이트 값에 따라 사전식으로 정렬되기 때문에 한글도 가능하다.
 
 ### 비트맵
 
+> String 자료 구조에 bit 연산을 수행할 수 있도록 확장한 형태이다.
+>
+> 때문에2³² 의 비트를 가지고 있는 비트맵 형태라고 볼 수 있다.
+
+```sql
+SETBIT mybitmap 2 1
+GETBIT 2
+> 1
+BITFIELD mybitmap SET u1 6 1  SET u1 10 1
+BITFIELD mybitmap GET u1 6 GET u1 7
+> 1
+> 0
+BITCOUNT mybitmap
+> 3
+BITPOS mybitmap 1 2 7
+> 
+```
+
+* **SETBIT**:  2번째 비트에 1의 값을 조회한다.
+* **GETBIT**: 2번째 비트 값을 조회한다.
+* **BITFIELD**: 한번에 여러 비트를 다룰 수 있다. u1은 1비트를 u4면 4비트를 사용한다.
+* **BITCOUNT**: 1로 설정된 비트의 개수를 카운팅 할 수 있다.
+* **BITOP**: 여러 개의 비트맵 간의 비트 연산을 수행합니다. (AND, OR, XOR, NOT)
+* **BITPOS**: 비트맵에서 특정 비트 값이 처음으로 등장하는 위치를 찾습니다.
+
 ### Hyperloglog
+
+> 집합의 원소 개수인 카디널리티를 추정할 수 있는 자료 구조이다.
+
+```
+PFADD members 123 200 300 11 200
+PFCOUNT members
+> 4
+```
+
+* PFADD: Hyperloglog에 아이템을 저장한다.
+* PFCOUNT: 저장된 아이템 개수(카디널리티)를 추정할 수 있다.
+
+#### 📚 참고자료
+
+* [https://d2.naver.com/helloworld/711301](https://d2.naver.com/helloworld/711301)
 
 ### Geospatial
 
+> 경도 위도 데이터 쌍의 집합으로 간편하게 지리 데이터를 저장할 수 있다.
+
+<pre class="language-sql"><code class="lang-sql"><strong>GEOADD travel 127.0016985 37.5642135 Seoul -122.43454762275572 37.78530362582044 SanFrancisco
+</strong>GEOPOS travel Seoul
+> "127.0016985"
+> "37.5642135"
+GEODIST travel Seoul SanFrancisco km
+> "9028.3077"
+GEOSEARCH travel FROMLONLAT 126 37 BYRADIUS 1000 km COUNT 100
+> "Seoul"
+</code></pre>
+
+* **GEOADD**: 경도 위도 아이템명을 순서대로 저장한다.
+* **GEOPOS**: 등록한 아이템을 찾는다.
+* **GEOSEARCH**: 특정 위치를 기준으로 원하는 거리 내에 있는 아이템을 검색할 수 있다.
+  * FROMLONLAT: 좌표를 기준으로 검색할 경우 사용된다.
+  * FROMMEMBER: 도시를 기준으로 검색할 경우 사용된다.
+
 ### Stream
+
+> 레디스를 메시지 브로커로서 사용할 수 있게 하는 자료 구조이다.
+>
+> 전체적인 구조는 카프카에서 영향을 받아 만들어 졌으며 소비자 그룹 개념을 도입하여 데이터를 분산 처리할 수 있는 시스템이다.
+
+## 레디스에서 키를 관리하는 방법
