@@ -1,35 +1,27 @@
----
-description: 🍇🍈🍉🍊🍋🍌🍍🥭🍎🍏🍐🍑🍒🍓🥝🥑
----
-
 # ☕ JAVA
 
 ### 자바 17에서의 추가적인 기능은?
 
 * Records
 * Stream.toList()
-*   Instanceof 변수 생성
-
-
-
-
+* Instanceof 변수 생성
 
 
 
 ## 🦾 컴파일 & 메모리
 
-### 🍇 자바는 컴파일언어일까 인터프리터 언어일까?
+### 자바는 컴파일언어일까 인터프리터 언어일까?
 
 자바는 컴파일과 인터프리터 두 방식을 모두 사용하고 있습니다.
 
-### 🍈 자바는 왜 컴파일을 할까?
+### 자바는 왜 컴파일을 할까?
 
 * 자바는 고수준 언어에서 작성 된 Java파일을 컴파일하여 바이트 코드인 class파일로 컴파일하는 작업을 하게 됩니다.
 * 이는 한번 작성한 코드를 어느 운영체제에서든 실행 가능하도록 한 자바의 목적에 의해서 JVM만 있다면 어디서든 동작이 가능하도록 JVM이 이해할 수 있는 바이트코드로 변환하기 위해 이러한 작업을 거치게 됩니다.
 
 
 
-### 🍉 자바의 컴파일 과정은?
+### 자바의 컴파일 과정은?
 
 <figure><img src="../.gitbook/assets/image (118).png" alt=""><figcaption><p><a href="https://velog.io/@mooh2jj/JIT-%EC%BB%B4%ED%8C%8C%EC%9D%BC%EB%9F%AC%EB%9E%80">https://velog.io/@mooh2jj/JIT-%EC%BB%B4%ED%8C%8C%EC%9D%BC%EB%9F%AC%EB%9E%80</a> 참조</p></figcaption></figure>
 
@@ -41,7 +33,7 @@ description: 🍇🍈🍉🍊🍋🍌🍍🥭🍎🍏🍐🍑🍒🍓🥝🥑
 
 
 
-### 🍊 JRE와 JDK의 차이점은?
+### JRE와 JDK의 차이점은?
 
 * **JRE**는 미리 작성된 자바코드를 실행시키기 위해서만 사용되고,
 * **JDK**는 JRE 기능을 포함하며 개발자가 자바를 개발하는데 사용할 수 있도록 컴파일러, jar 등을 추가로 제공합니다.

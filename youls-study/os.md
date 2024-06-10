@@ -7,7 +7,7 @@
 
 
 
-### 🍇 fork()를 수행하는 이유
+### fork()를 수행하는 이유
 
 * **동시성 향상 및 병렬성 증가**
   * 부모 프로세스가 자식 프로세스를 생성하여 동일한 코드를 병렬적으로 실행하기 때문에 동시 처리 능력이 향상됩니다.
@@ -21,7 +21,7 @@
 
 
 
-### 🍉 fork() 자식 프로세스 변환 예시
+### fork() 자식 프로세스 변환 예시
 
 * 자식 프로세스가 생성되면 우선 실행 중 바뀌지 않는 텍스트(text, 프로그램 코드)영역은 공유합니다.
 * 그리고 나머지 부모 프로세스의 Stack, Heap, Data 뿐 아니라 부모 프로세스의 PCB(Process Control Block)도 그대로 복사합니다.
@@ -42,7 +42,7 @@ COW로 인해 공유하고 있던 데이터의 수정이 발생하였으므로 p
 
 
 
-### 🍊 COW 란?
+### COW 란?
 
 * **Copy on Write**의 약자로 메모리 관리 기술 중 하나 입니다.
 * 주로 프로세스 간 메모리 공유를 효율적으로 관리하기 위한 방법입니다.
@@ -53,7 +53,7 @@ COW로 인해 공유하고 있던 데이터의 수정이 발생하였으므로 p
 
 
 
-## 🍋 IPC란?
+## IPC란?
 
 * **Inter-Process Communication**의 약자로 프로세스 간에 데이터를 주고 받을 수 있는 행위를 뜻합니다.
 * 주로 멀티프로세스 환경에서나 서로 다른 프로그램 간에 데이터를 전송하거나 공유할 때 사용됩니다.
@@ -61,7 +61,7 @@ COW로 인해 공유하고 있던 데이터의 수정이 발생하였으므로 p
 
 
 
-### 🍌 IPC 중 공유 메모리에서 한 번 공유된 이후에 커널의 도움이 필요한지?
+### IPC 중 공유 메모리에서 한 번 공유된 이후에 커널의 도움이 필요한지?
 
 * 커널의 도움은 한 번 공유메모리를 만들 때 이후에는 더이상 커널의 도움이 필요하지 않습니다.
 * 왼쪽 그림은 커널의 도움을 받는 메시지 전달 방법이고
@@ -72,7 +72,7 @@ COW로 인해 공유하고 있던 데이터의 수정이 발생하였으므로 p
 
 
 
-## 🍍PCB 란?
+## PCB 란?
 
 * Process Control Block 으로 운영체제가 프로세스의 정보를 저장하는 자료 구조입니다.
   1. 프로세스 식별자
@@ -90,7 +90,7 @@ COW로 인해 공유하고 있던 데이터의 수정이 발생하였으므로 p
 
 
 
-### 🥭 PCB는 어디에 저장되고 있을까요?
+### PCB는 어디에 저장되고 있을까요?
 
 * PCB는 프로세스의 중요한 정보를 포함하고 있기 때문에 주로 운영체제의 커널 스택에 저장되고 있습니다.
   * 커널 스택에는 인터럽트 처리, 시스템 호출, 예외 처리 같은 운영체제 핵심 부분에서 실행되는 코드의 호출 스택 정보가 저장됩니다.&#x20;
@@ -99,7 +99,7 @@ COW로 인해 공유하고 있던 데이터의 수정이 발생하였으므로 p
 
 
 
-## 🍎 프로세스 동기화 하는 방법
+## 프로세스 동기화 하는 방법
 
 * **뮤텍스**
   * 공유 자원에 대한 접근을 조절하기 위한 가장 기본적인 방법입니다.
@@ -123,7 +123,7 @@ COW로 인해 공유하고 있던 데이터의 수정이 발생하였으므로 p
 
 ## 🍏 메모리
 
-### 🍐 가상 메모리를 왜 사용할까요?
+### 가상 메모리를 왜 사용할까요?
 
 <figure><img src="../.gitbook/assets/image (109).png" alt=""><figcaption><p><a href="https://www.yes24.com/Product/Goods/62054527">https://www.yes24.com/Product/Goods/62054527</a></p></figcaption></figure>
 
@@ -137,7 +137,7 @@ COW로 인해 공유하고 있던 데이터의 수정이 발생하였으므로 p
 
 
 
-### 🍑 외부 단편화 vs 내부 단편화
+### 외부 단편화 vs 내부 단편화
 
 <div align="left">
 
@@ -161,7 +161,7 @@ COW로 인해 공유하고 있던 데이터의 수정이 발생하였으므로 p
 
 
 
-### 🍒 스택 vs 힙
+### 스택 vs 힙
 
 <div>
 
@@ -186,7 +186,7 @@ COW로 인해 공유하고 있던 데이터의 수정이 발생하였으므로 p
 
 ## 쓰레드와 프로세스
 
-### 🍇 프로세스 간의 통신 방법 (IPC : Inter Process Communication)
+### 프로세스 간의 통신 방법 (IPC : Inter Process Communication)
 
 #### 📨 메세지를 전달하는 방법 (Message Passing, PIPE)
 
@@ -207,7 +207,7 @@ COW로 인해 공유하고 있던 데이터의 수정이 발생하였으므로 p
 
 
 
-### 🍈 크롬 브라우저의 탭은 프로세스일까 쓰레드 일까?
+### 크롬 브라우저의 탭은 프로세스일까 쓰레드 일까?
 
 아마 이미 쓰레드에 대한 학습을 해보셨던분들이라면 하나의 프로세스를 여러 탭에서 쓰레드로 효율적으로 재사용 할 것 같지만,
 
@@ -241,7 +241,7 @@ COW로 인해 공유하고 있던 데이터의 수정이 발생하였으므로 p
 
 
 
-### 🍉 PCB 란? (Process Control Block)
+### PCB 란? (Process Control Block)
 
 <figure><img src="../.gitbook/assets/image (20).png" alt="" width="563"><figcaption><p><a href="https://byjus.com/gate/process-control-block-notes/">https://byjus.com/gate/process-control-block-notes/</a></p></figcaption></figure>
 
@@ -261,7 +261,7 @@ COW로 인해 공유하고 있던 데이터의 수정이 발생하였으므로 p
 
 &#x20;
 
-### 🍊 프로세스와 쓰레드의 메모리 영역
+### 프로세스와 쓰레드의 메모리 영역
 
 #### 프로세스
 
@@ -284,7 +284,7 @@ COW로 인해 공유하고 있던 데이터의 수정이 발생하였으므로 p
 
 
 
-### 🍋 멀티 쓰레드의 장/단점
+### 멀티 쓰레드의 장/단점
 
 <figure><img src="../.gitbook/assets/image (32).png" alt=""><figcaption><p><a href="https://velog.io/@eunjin/OS-%EC%8B%B1%EA%B8%80%EC%8A%A4%EB%A0%88%EB%93%9C-%EB%A9%80%ED%8B%B0%EC%8A%A4%EB%A0%88%EB%93%9C%EC%9D%98-%EC%9D%98%EB%AF%B8">그림 참조</a></p></figcaption></figure>
 
@@ -302,7 +302,7 @@ COW로 인해 공유하고 있던 데이터의 수정이 발생하였으므로 p
 
 
 
-### 🍌Context Switching에 대해 설명해주세요.
+### Context Switching에 대해 설명해주세요.
 
 <figure><img src="../.gitbook/assets/image (21).png" alt=""><figcaption><p><a href="https://byjus.com/gate/context-switching-in-os-notes/">https://byjus.com/gate/context-switching-in-os-notes/</a></p></figcaption></figure>
 
@@ -313,7 +313,7 @@ COW로 인해 공유하고 있던 데이터의 수정이 발생하였으므로 p
 
 
 
-### 🍍 Context Switching 비용이 왜 발생 할까요.
+### Context Switching 비용이 왜 발생 할까요.
 
 * Context Switching이 발생하게 되면 실행 중이던 프로세스의 정보를(CPU에 있던 레지스터와 PC 등) 운영체제 커널 영역 내에 존재하는 PCB에 저장 하게 됩니다.
 * 또한 다음에 실행하게 되는 Context(Process)에 대한 정보를 해당 PCB를 통해 가져오게 되는데,
@@ -332,7 +332,7 @@ COW로 인해 공유하고 있던 데이터의 수정이 발생하였으므로 p
 
 ## 스케줄링
 
-### 🥭 CPU 스케줄링이란?
+### CPU 스케줄링이란?
 
 <figure><img src="../.gitbook/assets/image (27).png" alt="https://itwiki.kr/w/%ED%8C%8C%EC%9D%BC:%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4_%EC%83%81%ED%83%9C%EC%A0%84%EC%9D%B4%EB%8F%84_%EC%83%81%EC%84%B8.png"><figcaption></figcaption></figure>
 
@@ -342,7 +342,7 @@ COW로 인해 공유하고 있던 데이터의 수정이 발생하였으므로 p
 
 
 
-### 🍎 Multilevel Queue 스케줄링이란?
+### Multilevel Queue 스케줄링이란?
 
 <figure><img src="../.gitbook/assets/image (26).png" alt=""><figcaption><p><a href="https://www.javatpoint.com/multilevel-queue-scheduling-in-operating-system">https://www.javatpoint.com/multilevel-queue-scheduling-in-operating-system</a></p></figcaption></figure>
 
@@ -355,7 +355,7 @@ COW로 인해 공유하고 있던 데이터의 수정이 발생하였으므로 p
 
 
 
-### 🍐 CPU가 여러 개 일 때 왜 멀티레벨 큐가 왜 적합할까
+### CPU가 여러 개 일 때 왜 멀티레벨 큐가 왜 적합할까
 
 * 우선 멀티레벨 큐를 사용하는 목적은 우선순위에 따라 효율적으로 스케줄링을 하기 위함에 있는데요.
 * 그 중에서 CPU가 여러 개 일 경우에 장점으로는 꼽는다면 병렬 처리를 효과적으로 할 수 있습니다.
@@ -364,7 +364,7 @@ COW로 인해 공유하고 있던 데이터의 수정이 발생하였으므로 p
 
 
 
-### 🍑 비선점 스케줄링 VS 선점 스케줄링
+### 비선점 스케줄링 VS 선점 스케줄링
 
 #### 선점형(preemptive)
 
@@ -384,7 +384,7 @@ CPU를 자진 해서 반납할 때까지 계속 실행 되는 것을 말합니�
 
 
 
-### 🍒 선점 스케줄링의 예시
+### 선점 스케줄링의 예시
 
 <figure><img src="../.gitbook/assets/image (23).png" alt=""><figcaption><p>Round-Robin 스케줄링</p></figcaption></figure>
 
@@ -397,7 +397,7 @@ CPU를 자진 해서 반납할 때까지 계속 실행 되는 것을 말합니�
 
 ## 🔄️ 동기화
 
-### 🍇 임계 영역이란? (Critical Section)
+### 임계 영역이란? (Critical Section)
 
 * 임계영역이란 **공유 변수 영역**으로 볼 수 있는데 병렬 컴퓨팅에서 **둘 이상의 스레드가 동시에 접근해서는 안되는 자원을 접근하는 코드의 일부**를 말합니다.
 
@@ -405,7 +405,7 @@ CPU를 자진 해서 반납할 때까지 계속 실행 되는 것을 말합니�
 
 
 
-### 🍈 임계 영역에 들어가는 것을 막는 방법은?
+### 임계 영역에 들어가는 것을 막는 방법은?
 
 * 임계 영역에 들어가는 것을 정하기 위한 방법으로는 **뮤텍스, 세마포어, 모니터** 등의 해결 방법 등이 있습니다.
 
@@ -415,7 +415,7 @@ CPU를 자진 해서 반납할 때까지 계속 실행 되는 것을 말합니�
 
 
 
-### &#x20;🍉 경쟁상태 란? (Race Condition)
+### &#x20;경쟁상태 란? (Race Condition)
 
 <figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 
@@ -424,7 +424,7 @@ CPU를 자진 해서 반납할 때까지 계속 실행 되는 것을 말합니�
 
 
 
-### &#x20;🍊 기아상태 란? (Starvation)
+### &#x20;기아상태 란? (Starvation)
 
 **특정 프로세스**의 우선 순위가 낮아 **원하는 자원을 계속하여 할당 받지 못하는 상태**를 의미합니다.
 
@@ -437,7 +437,7 @@ CPU를 자진 해서 반납할 때까지 계속 실행 되는 것을 말합니�
 
 
 
-### 🍋 교착상태 란? (Deadlock)
+### 교착상태 란? (Deadlock)
 
 <figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>서로 기다리며 아무일도 진행하지 못하는 상황</p></figcaption></figure>
 
@@ -464,7 +464,7 @@ CPU를 자진 해서 반납할 때까지 계속 실행 되는 것을 말합니�
 
 
 
-### 🍍 교착상태 해결 방안
+### 교착상태 해결 방안
 
 **데드락** **방지 / 회피 / 감지 및 복구 / 무시** 의 4가지 방법들을 소개해 드리겠습니다.
 
@@ -533,7 +533,7 @@ CPU를 자진 해서 반납할 때까지 계속 실행 되는 것을 말합니�
 
 
 
-### 🥭 세마포어란? (Semaphore)
+### 세마포어란? (Semaphore)
 
 다양한 스레드 간에 공유되는 **정수**(음수가 아닌) **변수**입니다.
 
@@ -554,7 +554,7 @@ CPU를 자진 해서 반납할 때까지 계속 실행 되는 것을 말합니�
 
 
 
-### 🍎 뮤텍스란? (Mutex)
+### 뮤텍스란? (Mutex)
 
 잠금 매커니즘을 제공하는 데 사용되는 **특정 종류의 이진 세마포어**라고 볼 수도 있습니다.
 
@@ -570,13 +570,13 @@ CPU를 자진 해서 반납할 때까지 계속 실행 되는 것을 말합니�
 
 
 
-### 🍏 뮤텍스 VS 세마포어
+### 뮤텍스 VS 세마포어
 
 <figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt=""><figcaption><p><a href="https://beatmejy.tistory.com/22">내 블로그 중 일부</a></p></figcaption></figure>
 
 
 
-### 🍐 모니터란? (Monitor)
+### 모니터란? (Monitor)
 
 <figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p><a href="https://core.ewha.ac.kr/publicview/C0101020140411143154161543?vmode=f">반효경 교수님 OS 강의 중</a></p></figcaption></figure>
 
