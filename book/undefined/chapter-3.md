@@ -4,7 +4,7 @@
 
 ### String
 
-> 레디스에서키와 실제 값이 일대일로 연결되는 유일한 자료 구조이다.
+> 레디스에서 키와 실제 값이 일대일로 연결되는 유일한 자료 구조이다.
 
 <pre class="language-sql"><code class="lang-sql">SET hello world
 GET hello
@@ -215,7 +215,7 @@ ZRANGE mySortedSet (b [e BYLEX
 
 > String 자료 구조에 bit 연산을 수행할 수 있도록 확장한 형태이다.
 >
-> 때문에2³² 의 비트를 가지고 있는 비트맵 형태라고 볼 수 있다.
+> 때문에 2³² 의 비트를 가지고 있는 비트맵 형태라고 볼 수 있다.
 
 ```sql
 SETBIT mybitmap 2 1
@@ -228,7 +228,7 @@ BITFIELD mybitmap GET u1 6 GET u1 7
 BITCOUNT mybitmap
 > 3
 BITPOS mybitmap 1 2 7
-> 
+> 추가
 ```
 
 * **SETBIT**:  2번째 비트에 1의 값을 조회한다.
@@ -274,6 +274,8 @@ GEOSEARCH travel FROMLONLAT 126 37 BYRADIUS 1000 km COUNT 100
 * **GEOSEARCH**: 특정 위치를 기준으로 원하는 거리 내에 있는 아이템을 검색할 수 있다.
   * FROMLONLAT: 좌표를 기준으로 검색할 경우 사용된다.
   * FROMMEMBER: 도시를 기준으로 검색할 경우 사용된다.
+* BYBOX: 추후 보강&#x20;
+* BYRADIUS: 추후 보강강
 
 ### Stream
 
