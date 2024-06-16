@@ -4,7 +4,7 @@ description: 레디스 자료 구조 활용사례
 
 # Chapter 4
 
-## sorted set 을 이용한 실시간 리더보드
+## 실시간 리더보드 (sorted set)
 
 ### 리더보드란?
 
@@ -45,9 +45,53 @@ ZREVRANGE daily-score:240617 0 2 withscores
 
 ```sql
 ZADD daily-score:240617 200 player:286
+ZINCRBY daily-score:240617 172 player:286
 ```
 
 * 만약 플레이어의 스코어를 갱신해야 한다면 위와 같은 커맨드로 쉽게 갱신 할 수 있다.
+  * **ZADD**: 같은 데이터는 중복으로 저장 되지 않으므로 새로운 스코어로 갱신된다.
+  * **ZINCRBY**: `INCREBY` 커맨드와 비슷하게 동작하여 스코어를 입력한 만큼 증가시킬 수도 있다.
+
+```sql
+ZUINONSTORE weekly-score:2406-3 7 
+daily-score:240617 daily-score:240618 daily-score:240619 daily-score:240620 
+daily-score:240621 daily-score:240622 daily-score:240623
+```
+
+* **ZUINONSTORE**: 지정한 키에 연결된 각 아이템의 스코어를 합산하는 커맨드이다.
+  * 만약 주말에 2배 점수 이벤트를 한다면 마지막에 `WEIGHTS` 옵션으로 가중치를 둘 수 있다.
+  * 위 코드의 맨 마지막 구문에 이와 같이 추가. `weight 1 1 1 1 1 2 2`
+
+
+
+## 최근 검색 기록 (sorted set)
+
+> 사용자별 가장 최근에 검색한 검색 기록 5개만을 가져온다 가정하자.
+
+```sql
+ZADD search-keyword:123 20240616103212 육개장사발면
+```
+
+* sorted set에 score를 날짜로 넣어 정렬을 하는 방법을 사용할 수 있다.
+* sorted set은 중복을 허용하지 않으므로 동일한 검색 결과도 존재 하지 않는다.
+* 동일한 검색 결과가 발생했다면 가장 최근에 검색한 데이터로 변경이 될 뿐이다.
+
+<figure><img src="../../.gitbook/assets/image.png" alt="" width="563"><figcaption></figcaption></figure>
+
+* 만일 ㄱ가 5개 이후에 삭제하는 로직을 구현할 경우 0번째 데이터를 삭제해야 하는데,
+* 이는 음수 인덱스를 사용하여 -6 부터 삭제를 하면 된다.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

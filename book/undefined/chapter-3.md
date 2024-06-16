@@ -210,7 +210,21 @@ ZRANGE mySortedSet (b [e BYLEX
     * BYLEX에선 `(`가 해당 문자를 포함하며 `[`가 해당 문자를 포함하지 않을 때 사용한다.
     * 가장 첫 문자는 `-`로 가장 마지막 문자는 `+`로 대체할 수 있다.
     * 문자열은 ASCII 바이트 값에 따라 사전식으로 정렬되기 때문에 한글도 가능하다.
-* **ZREVRANGE:** ZRANGE와 반대로 내림차순으로 조회.
+* **ZREVRANGE:** ZRANGE와 반대로 내림차순으로 조회한다.
+* **ZINCRBY**: `INCREBY` 커맨드와 비슷하게 동작하여 스코어를 입력한 만큼 증가시킬 수도 있다.
+
+```
+ZUINONSTORE <생성할 키 이름><합산할 키 개수><합산할 키>
+
+ZUINONSTORE weekly-score:2406-3 7 
+daily-score:240617 daily-score:240618 daily-score:240619 daily-score:240620 
+daily-score:240621 daily-score:240622 daily-score:240623
+```
+
+* **ZUINONSTORE**: 지정한 키에 연결된 각 아이템의 스코어를 합산하는 커맨드이다.
+  * 위와 같인 7일간의 주간 스코어를 각 아이템(유저) 별로 점수를 합산할 때 사용할 수 있다.
+
+
 
 ### 비트맵
 
