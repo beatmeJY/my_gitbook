@@ -20,6 +20,8 @@
   * [Chapter 1](book/undefined/chapter-1.md)
   * [Chapter 2](book/undefined/chapter-2.md)
   * [Chapter 3](book/undefined/chapter-3.md)
+  * [Chapter 4](book/undefined/chapter-4.md)
+  * [Chapter 5](book/undefined/chapter-5.md)
 
 ## ⌨️ Programming command
 
