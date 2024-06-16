@@ -226,7 +226,7 @@ BITOP AND event:202406 uv:20240617 uv:20240618
 > 2
 
 GET event:202406
-> "\x08\x02"
+> "\x10\x02"
 ```
 
 * **BITOP**: `AND`, `OR`, `XOR`, `NOT` 연산을 할 수 있다
