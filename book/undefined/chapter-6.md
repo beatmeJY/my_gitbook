@@ -14,7 +14,7 @@ description: 레디스를 메시지 브로커로 사용하기
 
 ### 메시지 publish 하기
 
-```
+```sql
 PUBLISH world hello
 ```
 
@@ -87,7 +87,7 @@ SSUBSCRIBE apple
 
 ### list의 확장 기능 (SNS 유저별 타임라인)
 
-```
+```sql
 RPUSHX Timelinecache:userB data3
 > 26
 
@@ -317,13 +317,138 @@ XPENDING Email EmailServiceGroup
 
 #### 메시지의 재할당
 
+> 소비자 서버에 장애가 발생해 복구 되지 않는다면 다른 소비자가 대신 처리해야 한다.
 
+```sql
+XCLAIM <key> <group> <consumer> <min-idle-time> <ID-1> <ID-2> ... <ID-N>
+
+EmailService 1: XCLAIM Email EmailServiceGroup EmailService3 360000
+```
+
+* **XCLAIM**:&#x20;
+  * 메시지가 보류 상태로 머무른 시간이 최소 대기 시간을 초과한 경우에만 소유권을 변경할 수 있도록해서 같은 메시지가 2개의 다른  소비자에게 중복으로 할당되는 것을 방지할 수 있다.
+* 위의 예제는 EmailService 1이 문제가 발생한 EmailService3 소비자의 보류 상태로 머무른 시간이 최소 360,000초를 넘겼을 경우 가져가는 커맨드이다.
 
 #### 메시지의 자동 재할당
 
+> `XPENDING`을 사용해 보류 중인 메시지를 확인하고 `XCLAIM` 명령을 통해 메시지를 다시 할당하는 것은 번거로울 수 있다. 이를 자동으로 가져와서 처리할 수도 있다.
+
+```sql
+XAUTOCLAIM <key> <group> <consumer> <min-idle-time> <start> [COUNT count] [JUSTID]
+
+XAUTOCLAIM Email EmailServiceGroup es1 360000 0-0 count 1
+> "1659170655277-0"
+> 1) 1) "1659114966798-0"
+>    2) 1) "subject"
+>       2) "second"
+>       3) "body"
+>       4) "hihi"
+```
+
+* **XAUTOCLAIM**: 할당 대기 중인 다음 메시지의 ID를 반환하는 방식으로 동작하기 때문에 반복적 호출을 가능하게 한다.
+* 위의 예제에서는 첫 번째 반환 값으로 다음으로 대기 중인 보류 메시지의 ID가 반환된다.
+* 더 이상 대기 중인 보류 메시지가 없을 경우 0-0이 반환된다.
+* 두 번째 반환 값은 소유권이 이전되 메시지의 정보를 제공한다.
+* 내부 필드-값 쌍이 순서대로 포함되며, 이 메시지의 소유권은 es1 에게로 할당 되었다.
+
 #### 메시지의 수동 재할당
+
+* stream 내의 각 메시지는 `counter`라는 값을 각각 가지고 있다.
+  * `XREADGROUP`을 이용해 소비자에게 할당하거나 `XCLAIM` 커맨드로 재할당할 경우 1씩 증가한다.
+* 만약 메시지에 문제가 있어 처리되지 못할 경우 여러 소비자에게 할당되기를 반복하면서 `counter` 값이 계속 증가하게 된다.
+* 따라서 `counter` 가 특정 값에 달하게 되면 특수한 다른 stream으로 보내 관리자가 추후에 처리할 수 있도록 하는 것이 좋을 수 있다.
+* 보통 이런 메시지를 `dead letter`라고 부른다.
 
 #### Stream 상태 확인
 
+> 일반적인 메시징 시스템이 그렇듯 어떤 소비자가 활성화 됐는지 보류된 메시지는 어떤 건지, 어떤 소비자 그룹이 메시지를 처리하고 있는지 등의 상태를 확인하는 커맨드가 없다면 stream을 관리하기 까다로울 것이다.
 
+```sql
+XINFO HELP
+```
 
+* **XINFO HELP**: stream의 여러 상태를 확인할 수 있는 커맨드들을 확인할 수 있다.
+
+```sql
+XINFO consumers Email EmailServiceGroup
+> 1) 1) "name"
+>    2) "es1"
+>    3) "pending"
+>    4) (integer) 1
+>    5) "idle"
+>    6) (integer) 650129
+> 2) 1) "name"
+>    2) "es2"
+>    3) "pending"
+>    4) (integer) 0
+>    5) "idle"
+>    6) (integer) 437738623
+> 3) 1) "name"
+>    2) "es3"
+>    3) "pending"
+>    4) (integer) 7
+>    5) "idle"
+>    6) (integer) 858725
+```
+
+* **XINFO consumers**: 특정 소비자 그룹에 속한 소비자의 정보를 알 수 있다.
+
+```sql
+XINFO GROUPS Email
+> 1) 1) "name"
+>    2) "bigroup"
+>    3) "consumers"
+>    4) (integer) 1
+>    5) "pending"
+>    6) (integer) 6
+>    7) "last-delivered-id"
+>    8) "1659170733830-0"
+>    9) "entries-read"
+>   10) (integer) 6
+>   11) "lag"
+>   12) (integer) 4
+> 2) 1) "name"
+>    2) "EmailServiceGroup"
+>    3) "consumers"
+>    4) (integer) 3
+>    5) "pending"
+>    6) (integer) 8
+>    7) "last-delivered-id"
+>    8) "1659170735630-0"
+>    9) "entries-read"
+>   10) (integer) 10
+>   11) "lag"
+>   12) (integer) 0
+```
+
+* **XINFO GROUPS**: stream에 속한 전체 소비자 그룹 list를 볼 수 있다.
+
+```sql
+XINFO STREAM email
+>  1) "length"
+>  2) (integer) 10
+>  3) "radix-tree-keys"
+>  4) (integer) 1
+>  5) "radix-tree-nodes"
+>  6) (integer) 2
+>  7) "last-generated-id"
+>  8) "1659170735630-0"
+>  9) "max-deleted-entry-id"
+> 10) "0-0"
+> 11) "entries-added"
+> 12) (integer) 10
+> 13) "recorded-first-entry-id"
+> 14) "1659114481311-0"
+> 15) "groups"
+> 16) (integer) 3
+> 17) "first-entry"
+> 18) 1) "1659114481311-0"
+>     2) 1) "subject"
+>        2) "hello" 
+>        3) "body" 
+>        4) "hi" 
+```
+
+* **XINFO STREAM**: Stream 자체의 정보를 알 수 있다.
+* stream이 내부적으로 어떻게 인코딩되고 있는지 알 수 있다.
+* 첫 번째와 마지막 메시지의 ID를 표시한다.
