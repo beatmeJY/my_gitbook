@@ -39,3 +39,5 @@
 * [Git](programming-command/git/README.md)
   * [인텔리제이](programming-command/git/undefined.md)
   * [문제 상황](programming-command/git/undefined-1.md)
+* [Tool](programming-command/tool/README.md)
+  * [intellij](programming-command/tool/intellij.md)
