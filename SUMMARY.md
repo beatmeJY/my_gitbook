@@ -24,6 +24,7 @@
   * [Chapter 5](book/undefined/chapter-5.md)
   * [Chapter 6](book/undefined/chapter-6.md)
   * [Chapter 7](book/undefined/chapter-7.md)
+  * [Chapter 11](book/undefined/chapter-11.md)
 
 ## ⌨️ Programming command
 
