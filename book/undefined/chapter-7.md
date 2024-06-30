@@ -157,10 +157,19 @@ key1
 
 ### 자동 AOF 재구성
 
+```
+auto-aof-rewrite-percentage 100
+auto-aof-rewrite-min-size 64mb
+```
+
+* **auto-aof-rewrite-percentage**:  AOF 파일을 다시 쓰기 위한 시점을 정하기 위한 옵션이다.
+* 마지막으로 재구성됐던 AOF 파일의 크기와 비교해, 현재의 AOF 파일이 지정된 퍼센트만큼 커졌을 때 재구성을 시도한다.
+* 마지막으로 저장된 AOF 파일의 크기는 레디스에서 `INFO Persistence` 커맨드로 확인할 수 있는 `aof_base_size` 값이다.
+
 ### 수동 AOF 재구성
 
 * `BGREWRITEAOF` 커맨드를 이용하면 원하는 시점에 직접 AOF 파일을 재구성할 수 있다.
-* 자동으로 재구성할 떄와 동일하게 동작한다.
+* 자동으로 재구성할 때와 동일하게 동작한다.
 
 ### AOF 타임스탬프
 
