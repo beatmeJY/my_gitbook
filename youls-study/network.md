@@ -62,7 +62,7 @@
 
 ### LAN과 WAN의 차이에 대해서 설명해주세요.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p><a href="https://www.cloudflare.com/ko-kr/learning/network-layer/what-is-a-wan/">https://www.cloudflare.com/ko-kr/learning/network-layer/what-is-a-wan/</a></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p><a href="https://www.cloudflare.com/ko-kr/learning/network-layer/what-is-a-wan/">https://www.cloudflare.com/ko-kr/learning/network-layer/what-is-a-wan/</a></p></figcaption></figure>
 
 #### LAN
 

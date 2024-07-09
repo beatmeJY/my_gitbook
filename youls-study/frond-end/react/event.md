@@ -37,7 +37,7 @@
 
 
 
-## 컴포넌트 간 이벤트 전파 예제
+## 상위 컴포넌트로 이벤트 사용 예제
 
 ```jsx
 import React, { Component } from 'react';

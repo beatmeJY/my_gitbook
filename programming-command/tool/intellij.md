@@ -25,7 +25,7 @@ Preferences -> Editor -> General -> Smart Keys 에서 User "CamelHumps" words �
 
 4.
 
-    <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 
 5.
