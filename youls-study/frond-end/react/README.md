@@ -28,4 +28,4 @@ export default Content
 
 ### 여러 동작 과정 설명
 
-* 리액트에서는 props나 state의 값이 바뀌면 해당 컴포넌트의 render함수가 재 호출 된다.
+* 리액트에서는 `props`나 `state`의 값이 바뀌면 해당 컴포넌트의 `render()`가 재 호출 된다.
