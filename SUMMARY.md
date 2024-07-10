@@ -13,7 +13,8 @@
 * [💻 OS](youls-study/os.md)
 * [💾 DB](youls-study/db.md)
 * [Frond-end](youls-study/frond-end/README.md)
-  * [JavaScript](youls-study/frond-end/javascript.md)
+  * [JavaScript](youls-study/frond-end/javascript/README.md)
+    * [var, let, const 차이](youls-study/frond-end/javascript/var-let-const.md)
   * [React](youls-study/frond-end/react/README.md)
     * [Component](youls-study/frond-end/react/component.md)
     * [Props](youls-study/frond-end/react/props.md)
@@ -21,6 +22,8 @@
     * [Event](youls-study/frond-end/react/event.md)
     * [함수형 프로그래밍](youls-study/frond-end/react/undefined.md)
   * [TypeScript](youls-study/frond-end/typescript/README.md)
+    * [TypeScript 타입 종류](youls-study/frond-end/typescript/typescript.md)
+    * [React + Typescript](youls-study/frond-end/typescript/react-+-typescript.md)
     * [ApiResponse 만들기](youls-study/frond-end/typescript/apiresponse.md)
 * [📖 참고자료](youls-study/undefined.md)
 
