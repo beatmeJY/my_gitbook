@@ -55,3 +55,4 @@
   * [문제 상황](programming-command/git/undefined-1.md)
 * [Tool](programming-command/tool/README.md)
   * [intellij](programming-command/tool/intellij.md)
+* [Terminal](programming-command/terminal.md)
