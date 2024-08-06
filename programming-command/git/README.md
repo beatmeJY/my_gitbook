@@ -21,6 +21,8 @@ now에서 작업 중 other-branch와 병합해야 할 때. (other-branch가 now-
 * git switch "브랜치"
 * git rebase main
 * git stash pop
+* git add .
+* git merge --no-ff -m "차은우"
 
 ### 로컬 브랜치 변경 사항 깃에 강제 푸시
 
