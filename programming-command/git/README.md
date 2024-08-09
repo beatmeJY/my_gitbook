@@ -15,15 +15,13 @@ now에서 작업 중 other-branch와 병합해야 할 때. (other-branch가 now-
 
 ### 깃 다른 브런치 메인에 merge 된 것 rebase로 내 브런치에 땡겨오기.
 
-* git stash
-* git switch main
-* git pull origin main
-* git switch "브랜치"
-* git rebase main
-* git stash pop
-* git add .
-* git merge --no-ff -m "차은우"
-
-### 로컬 브랜치 변경 사항 깃에 강제 푸시
-
-* git push -f origin branch&#x20;
+```
+$ git stash
+$ git switch dev 
+$ git pull origin dev 
+$ git switch ${BRANCH} 
+$ git rebase dev 
+$ git fetch origin ${BRANCH} 
+$ git rebase origin/${BRANCH}
+$ git stash pop
+```
