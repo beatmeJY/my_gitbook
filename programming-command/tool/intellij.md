@@ -31,3 +31,19 @@ Preferences -> Editor -> General -> Smart Keys 에서 User "CamelHumps" words �
 5.
 
     <figure><img src="../../.gitbook/assets/image (119).png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+### 윈도우 맥 CRLF와 LF 차이 에러나는거 해결하기
+
+내가 윈도우 일때 파일들이crlf로 다운이 받아지는 문제가 발생함.
+
+```
+git config --global core.eol lf
+git config --global core.autocrlf input
+```
+
+* 위와같이 터미널에 입력한 뒤,
+* 프로젝트를 다시 받으면 lf로 받아진다.
