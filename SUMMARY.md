@@ -56,3 +56,16 @@
 * [Tool](programming-command/tool/README.md)
   * [intellij](programming-command/tool/intellij.md)
 * [Terminal](programming-command/terminal.md)
+
+## 성장하는 이력서 관리법
+
+* [타임 라인 작성](undefined/undefined/README.md)
+  * [2022](undefined/undefined/2022.md)
+  * [2023](undefined/undefined/2023.md)
+  * [2024](undefined/undefined/2024.md)
+* [서류합격률 4%를 탈출하는 개발자](undefined/4/README.md)
+  * [작성 시 갖춰야 마인드 셋](undefined/4/undefined.md)
+  * [서류 검토 시 중요한 것들](undefined/4/undefined-1.md)
+  * [이력서 작성 시 피해야 할 안티패턴](undefined/4/undefined-2.md)
+  * [이력서 작성하기](undefined/4/undefined-3.md)
+  * [지원동기](undefined/4/undefined-4.md)
