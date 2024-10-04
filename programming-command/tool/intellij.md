@@ -47,3 +47,10 @@ git config --global core.autocrlf input
 
 * 위와같이 터미널에 입력한 뒤,
 * 프로젝트를 다시 받으면 lf로 받아진다.
+
+
+
+### 단축키 알림 툴
+
+* key promoter 설치 (단축키알림)
+* Presentation Assistant 설치 (알림을 예쁘게 보여줌)
