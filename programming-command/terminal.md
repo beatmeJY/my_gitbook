@@ -1,5 +1,16 @@
 # Terminal
 
+원하는 포트 찾아서 죽이기
+
+```
+netstat -a -o
+taskkill /f /pid `PID번호`
+```
+
+
+
+
+
 리눅스에서 포트 번호 레인지 확인하는 명령어.
 
 ```bash
