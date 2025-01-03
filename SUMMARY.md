@@ -42,6 +42,7 @@
 ## ⌨️ Programming command
 
 * [Infra](programming-command/infra/README.md)
+  * [AWS](programming-command/infra/aws.md)
   * [docker](programming-command/infra/docker.md)
 * [Language](programming-command/language/README.md)
   * [Java](programming-command/language/java.md)
