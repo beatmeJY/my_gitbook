@@ -139,15 +139,7 @@ COW로 인해 공유하고 있던 데이터의 수정이 발생하였으므로 p
 
 ### 외부 단편화 vs 내부 단편화
 
-<div align="left">
-
-<figure><img src="../.gitbook/assets/image (110).png" alt="" width="548"><figcaption><p><a href="https://www.yes24.com/Product/Goods/62054527">외부 단편화</a></p></figcaption></figure>
-
- 
-
-<figure><img src="../.gitbook/assets/image (114).png" alt="" width="563"><figcaption><p><a href="https://www.yes24.com/Product/Goods/62054527">(고정 분할 시) 내부 단편화</a></p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../.gitbook/assets/image (110).png" alt="" width="548"><figcaption><p><a href="https://www.yes24.com/Product/Goods/62054527">외부 단편화</a></p></figcaption></figure> <figure><img src="../.gitbook/assets/image (114).png" alt="" width="563"><figcaption><p><a href="https://www.yes24.com/Product/Goods/62054527">(고정 분할 시) 내부 단편화</a></p></figcaption></figure></div>
 
 #### 외부 단편화
 
@@ -163,15 +155,7 @@ COW로 인해 공유하고 있던 데이터의 수정이 발생하였으므로 p
 
 ### 스택 vs 힙
 
-<div>
-
-<figure><img src="../.gitbook/assets/image (116).png" alt="" width="563"><figcaption><p><a href="https://velog.io/@sarang_daddy/CS-Memory">https://velog.io/@sarang_daddy/CS-Memory</a></p></figcaption></figure>
-
- 
-
-<figure><img src="../.gitbook/assets/image (117).png" alt="" width="314"><figcaption></figcaption></figure>
-
-</div>
+<div><figure><img src="../.gitbook/assets/image (116).png" alt="" width="563"><figcaption><p><a href="https://velog.io/@sarang_daddy/CS-Memory">https://velog.io/@sarang_daddy/CS-Memory</a></p></figcaption></figure> <figure><img src="../.gitbook/assets/image (117).png" alt="" width="314"><figcaption></figcaption></figure></div>
 
 |        |              Stack              |                 Heap                |
 | :----: | :-----------------------------: | :---------------------------------: |
@@ -468,7 +452,7 @@ CPU를 자진 해서 반납할 때까지 계속 실행 되는 것을 말합니�
 
 **데드락** **방지 / 회피 / 감지 및 복구 / 무시** 의 4가지 방법들을 소개해 드리겠습니다.
 
-#### **🛡️ **<mark style="background-color:orange;">**데드락 방지 (Deadlock Prevention)**</mark>
+#### **🛡️&#x20;**<mark style="background-color:orange;">**데드락 방지 (Deadlock Prevention)**</mark>
 
 * 자원 할당 시 Deadlock 발생 조건의 **4가지 중 하나라도 만족하지 못하도록 방지**하는 방법입니다.
   1. **Mutual Exclusion 방지**
@@ -483,7 +467,7 @@ CPU를 자진 해서 반납할 때까지 계속 실행 되는 것을 말합니�
   4. **Circular Wait 방지**
      * 자원의 할당 순서를 정하여 정해진 순서대로만 자원을 할당 받게 합니다.
 
-#### **🪖 **<mark style="background-color:orange;">**데드락 회피 (Deadlock Avoidance)**</mark>
+#### **🪖&#x20;**<mark style="background-color:orange;">**데드락 회피 (Deadlock Avoidance)**</mark>
 
 자원 요청 시 받는 **부가적인 정보**를 이용해서 **데드락의 가능성이 없는 경우에만 자원을 할당**하는 방법입니다.
 
@@ -504,7 +488,7 @@ CPU를 자진 해서 반납할 때까지 계속 실행 되는 것을 말합니�
       * 한 프로세스가 최대 사용자원은 10이고 현재 사용해야 하는 자원도 10일 경우에는 할당하여 줍니다.
     * 위와 같이 현재 **당장 자원이 남아있더라도** 혹시 몰라서 **할당하여 주지 않으므로 비효율적**입니다.
 
-#### **🚑 **<mark style="background-color:orange;">**데드락 감지 및 복구 (Deadlock Detection and Recovery)**</mark>
+#### **🚑&#x20;**<mark style="background-color:orange;">**데드락 감지 및 복구 (Deadlock Detection and Recovery)**</mark>
 
 **데드락 발생은 허용**하되 발생하면 **감지해서 복구**를 하는 방법입니다.
 
@@ -523,7 +507,7 @@ CPU를 자진 해서 반납할 때까지 계속 실행 되는 것을 말합니�
      * 비용을 최소화 할 victim(종료될 프로세스)를 선정합니다.
        * 비용 계산 시 높은 비용의 프로세스들만 계속 종료 시킬 경우 기아 현상이 발생할 수 있으므로, 종료의 타겟이 된 횟수 같은 것 도 계산에 넣는 것을 고려해야 합니다.
 
-#### **🔕 **<mark style="background-color:orange;">**데드락 무시 (Deadlock Ignorance)**</mark>
+#### **🔕&#x20;**<mark style="background-color:orange;">**데드락 무시 (Deadlock Ignorance)**</mark>
 
 **데드락이 생기지 않는 다고 생각**하고 시스템이 책임을 지지 않는 것입니다.
 
@@ -566,7 +550,7 @@ CPU를 자진 해서 반납할 때까지 계속 실행 되는 것을 말합니�
   1. 임계 구역에 들어간 스레드가 휴먼 상태이면, 기아 상태로 이어질 수 있습니다.
   2. 우선순위가 높은 프로세스만 선점되면, 이 역시도 기아 상태로 이어질 수 있습니다.
   3. 이전 스레드가 스스로 임계 영역을 벗어나야지만 다른 프로세스가 임계 영역에 들어갈 수 있어서, 다른 프로세스가 잠금을 해제할 수 없습니다.
-  4. [바쁜 대기](https://ko.wikipedia.org/wiki/%EB%B0%94%EC%81%9C\_%EB%8C%80%EA%B8%B0)가 발생하여 CPU 주기가 낭비 될 수 있습니다.
+  4. [바쁜 대기](https://ko.wikipedia.org/wiki/%EB%B0%94%EC%81%9C_%EB%8C%80%EA%B8%B0)가 발생하여 CPU 주기가 낭비 될 수 있습니다.
 
 
 

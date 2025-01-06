@@ -76,7 +76,7 @@ ZADD search-keyword:123 20240616103212 육개장사발면
 * sorted set은 중복을 허용하지 않으므로 동일한 검색 결과도 존재 하지 않는다.
 * 동일한 검색 결과가 발생했다면 가장 최근에 검색한 데이터로 변경이 될 뿐이다.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 * 만일 검색기록이 5개 이상이면 가장 오래전 검색 결과를 삭제해야 하는데,
 * 이는 음수 인덱스를 사용하면 -6 (가장 오래된 데이터) 부터 안전하게 삭제 할 수 있다.

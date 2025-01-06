@@ -25,7 +25,7 @@ Preferences -> Editor -> General -> Smart Keys 에서 User "CamelHumps" words �
 
 4.
 
-    <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 5.
@@ -54,3 +54,9 @@ git config --global core.autocrlf input
 
 * key promoter 설치 (단축키알림)
 * Presentation Assistant 설치 (알림을 예쁘게 보여줌)
+
+
+
+### Auto Import 자동으로 임포트 하기
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
