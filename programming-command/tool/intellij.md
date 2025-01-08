@@ -25,7 +25,7 @@ Preferences -> Editor -> General -> Smart Keys 에서 User "CamelHumps" words �
 
 4.
 
-    <figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 5.
@@ -58,5 +58,17 @@ git config --global core.autocrlf input
 
 
 ### Auto Import 자동으로 임포트 하기
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+### CamelCase 플러그인 원하는 형식만 사용하도록 설정하기
+
+<figure><img src="../../.gitbook/assets/image (120).png" alt=""><figcaption></figcaption></figure>
+
+
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
