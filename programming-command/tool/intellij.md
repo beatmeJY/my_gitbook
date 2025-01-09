@@ -72,3 +72,11 @@ git config --global core.autocrlf input
 
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+### 단어 CamelCase 별로 선택하도록 범위 수정하기
+
+Preferences -> Editor -> General -> Smart Keys 에서 User "CamelHumps" words 옵션을 체크
