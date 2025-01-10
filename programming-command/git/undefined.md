@@ -10,10 +10,10 @@
 * 이러한 문제는 새로운 Branch를 작성해서 다시 PR을 올려야 하지만 기존 진행하던 Branch가 Approve 없이 커밋 된다는 것 자체가 문제가 되기에 이를 방지하기 위해 아래와 같은 2가지 정책을 추가하였다.
   1.  첫번째로는 Merge를 할때에는 2명 이상의 승인이 필요하도록 설정을 하여 강제로 merge가 되는 것을 막아주었다. (2인 프로젝트 이기 때문에)
 
-      <figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
   2.  두번째로는&#x20;
 
-      <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 

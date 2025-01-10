@@ -13,7 +13,7 @@ SET key2 b
 DEL key2
 ```
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>AOF와 RDB 저장 차이</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>AOF와 RDB 저장 차이</p></figcaption></figure>
 
 * AOF 파일에는 레디스에서 실행된 모든 쓰기 작업이 기록된다.
 * RDB 파일에는 저장되는 시점의 메모리 데이터가 그대로 저장된다.

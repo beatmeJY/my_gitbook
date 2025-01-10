@@ -25,7 +25,7 @@ Preferences -> Editor -> General -> Smart Keys 에서 User "CamelHumps" words �
 
 4.
 
-    <figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 5.
@@ -59,7 +59,7 @@ git config --global core.autocrlf input
 
 ### Auto Import 자동으로 임포트 하기
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -71,7 +71,7 @@ git config --global core.autocrlf input
 
 
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -80,3 +80,13 @@ git config --global core.autocrlf input
 ### 단어 CamelCase 별로 선택하도록 범위 수정하기
 
 Preferences -> Editor -> General -> Smart Keys 에서 User "CamelHumps" words 옵션을 체크
+
+
+
+
+
+### 마우스 커서가 놓인 변수의 동일 변수 색상 변경
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+&#x20;

@@ -9,7 +9,7 @@
 
 ### **1. 소프트웨어 아키텍처의 변화  (Monolitic** vs **Microservices)**
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p><a href="https://tech.ssut.me/goodbye-microservice/">https://tech.ssut.me/goodbye-microservice/</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p><a href="https://tech.ssut.me/goodbye-microservice/">https://tech.ssut.me/goodbye-microservice/</a></p></figcaption></figure>
 
 * **모놀리틱 아키텍처**
   * 전통적인 소프트웨어 개발 모델이다.
@@ -24,7 +24,7 @@
 
 ### 2. 데이터 저장소 요구 사항의 변화 (RDBMS vs NoSQL)
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p><a href="https://www.geeksforgeeks.org/sql-vs-nosql-which-one-is-better-to-use/">https://www.geeksforgeeks.org/sql-vs-nosql-which-one-is-better-to-use/</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p><a href="https://www.geeksforgeeks.org/sql-vs-nosql-which-one-is-better-to-use/">https://www.geeksforgeeks.org/sql-vs-nosql-which-one-is-better-to-use/</a></p></figcaption></figure>
 
 #### **RDBMS**
 
