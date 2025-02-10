@@ -27,7 +27,7 @@
 아래 코드 추가한 후 "git history" 치면 로그 이쁘게 확인 가능. (history는 이름 임의로 변경 가능)
 
 ```
-git config --global alias.history "log --graph --all --pretty=format:'%C(yellow)[%ad]%C(reset) %C(green)[%h]%C(reset) | %C(white)%s %C(bold red){{%an}}%C(reset) %C(blue)%d%C(reset)' --date=short"
+git config --global alias.history "log --graph --all --pretty=format:'%C(yellow)[%ad]%C(reset) %C(green)[%h]%C(reset) | %C(white)%s %C(bold red){{%an}}%C(reset) %C(blue)%d%C(reset)' --date=format:'%Y-%m-%d %H:%M:%S'"
 ```
 
 **깃 merge 할때 VSCode로 작업하기.**
