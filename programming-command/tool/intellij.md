@@ -95,3 +95,13 @@ Preferences -> Editor -> General -> Smart Keys 에서 User "CamelHumps" words �
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
+
+
+## Key Map
+
+
+
+**탭 이동**&#x20;
+
+* select next tab
+* select previous tab
