@@ -12,6 +12,8 @@
 * [🌐 Network](youls-study/network.md)
 * [💻 OS](youls-study/os.md)
 * [💾 DB](youls-study/db.md)
+* [AWS](youls-study/aws/README.md)
+  * [EC2](youls-study/aws/ec2.md)
 * [Frond-end](youls-study/frond-end/README.md)
   * [JavaScript](youls-study/frond-end/javascript/README.md)
     * [var, let, const 차이](youls-study/frond-end/javascript/var-let-const.md)
